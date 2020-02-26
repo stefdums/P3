@@ -1,0 +1,427 @@
+@import "variables";
+
+body{
+    box-sizing: border-box;
+    margin:0 0 0 0;
+    padding:0;
+    height:auto;
+    
+}
+header{
+    background-color: $vert;   
+    height:7vh;
+    text-align:center;
+    line-height: 7vh;
+    margin-bottom:3vh;
+    a{
+        color:$jaune;
+        text-decoration:none;
+        font-size:2em;
+        opacity:1;
+    }
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 3vh;
+    a{
+        color:transparent;
+    }
+
+    a:hover{
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+
+}
+.page__menu h1{
+    text-align:center;
+}
+
+@each $background in $backgrounds {
+    .#{nth($background, 1)} {
+        background-color:nth($background, 2);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2 );
+        justify-self: center;
+        width:$width;
+        height:$height;
+        
+        a{
+            display:block;
+            width:100%;
+            height:100%;
+            text-decoration:none;
+            text-align: center;
+            .menu{
+                padding:17vh 0 15vh 0;    
+            }
+            h1{
+                margin-top:0;    
+            }    
+        }        
+    }
+}
+
+.la-note-enchantee, .page__la-note-enchantee{
+    h1, p{
+        color:#3d1319;    
+    }
+    h2, .prix{
+        font-weight:bold;
+    }
+
+}
+
+.le-chic-a-la-française, .page__le-chic-a-la-française{
+    h1{
+        color:transparent;
+        background: linear-gradient(160deg,#e38a12, #8f5aff );
+        background-clip:text;
+        -webkit-background-clip: text;
+    } 
+    p{
+        color:#c77412
+    }   
+}
+
+.le-délice-des-papilles, .page__le-délice-des-papilles{
+    h1{
+        color:transparent;
+        background: linear-gradient(to right, #0023db, #2495fb );
+        background-clip:text;
+        -webkit-background-clip: text;
+    } 
+    p{
+        color:#0887fb
+    }   
+}
+
+.la-palette-du-gout, .page__la-palette-du-gout{
+    h1{
+        color:transparent;
+        background: linear-gradient(to right, #3e923a, #beff7f );
+        background-clip:text;
+        -webkit-background-clip: text;
+        
+    } 
+    p{
+        color:#72bf56
+    }   
+    
+}
+
+// #prochainement{
+//     display: flex;
+//     justify-content:center;
+//     align-items: center;
+//     width:67vw;
+//     height:5vh;
+//     border-radius: 7px;
+//     background-color:$vert;
+//     color:$jaune;
+//     margin: 3vh auto;
+
+// //animation du bouton prochainement     
+//     #test{
+//         width:67vw;
+//         height:5vh;
+//         position: relative;
+        
+
+
+//         &:hover + .points{
+//             animation-name: test;
+//             animation-duration: 1000ms;
+//             //animation-delay:500ms;
+//             animation-iteration-count:infinite;
+//             animation-direction:alternate;
+//             //animation-fill-mode: both;
+
+//         }
+//     }
+//     p{
+//         line-height: 5vh;
+//         margin: 0 0 0 10vw;
+        
+//     }
+//     .points{
+//         position: absolute;
+//         left: 60vw;
+
+//         .point{
+//             display: inline-block;
+//             background-color: $jaune;
+//             border-radius:50px;
+//             width:7px;
+//             height:7px;
+//             border:1px solid $jaune;
+//             opacity: 1;
+//         }
+//     }   
+// }
+
+
+#prochainement{
+    width:272px;
+    height:46px;
+    border-radius: 7px;
+    background-color:$vert;
+    color:$jaune;
+    margin: 3vh auto;
+    text-align:center;
+    overflow: hidden;
+    line-height: 5vh;
+
+    p{
+        margin:0 0 0 10px;
+
+        &::after{
+            content:"";
+            margin-left:10px;
+            display: inline-block;
+            background-color:$jaune;
+            border-radius:50px;
+            width:7px;
+            height:7px;
+            border:1px solid $jaune;
+            opacity: 0;   
+        }
+    }
+
+    &:hover{
+        p{
+        translate: -14%;
+        
+            &::after{
+            animation-name: points;
+            animation-duration: 1000ms;
+            animation-delay:500ms;
+            animation-iteration-count:infinite;
+            animation-direction:alternate;
+            animation-fill-mode: both;
+            }
+        }
+ 
+    }
+
+
+}
+
+
+footer{
+    position: fixed;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    display:flex;
+    justify-content:space-between;
+    height:3.5vh;
+    line-height:3.5vh;
+    background-color:$vert;
+    color:$jaune;
+    a{
+        margin: 0 5vw;
+        text-decoration:none;
+        color:$jaune;
+    
+    }
+    .footer__btn:hover{
+        animation-name: wiggle;
+        animation-duration: 550ms;
+        animation-iteration-count: infinite;
+        }
+    }    
+       
+//encadrage des repas
+@media screen and (min-width:349px) {  
+    .l-n-e h2::before{
+        content:"";
+        display:inline-block;
+        width:20vw;
+        height: 1vh;
+        background-size:20vw 1vh;
+        background-image:url("../css/svg/Menu1-ligneG.svg"); 
+        margin-right:5vw;    
+    }
+    .l-n-e h2::after{
+        content:"";
+        display:inline-block;
+        width:20vw;
+        height: 1vh;
+        background-size:20vw 1vh;
+        background-image:url("../css/svg/Menu1-ligneD.svg");
+        margin-left:5vw;     
+    }
+
+    .l-c-f h2::before{
+        content:"";
+        display:inline-block;
+        width:20vw;
+        height: 1vh;
+        background-size:20vw 1vh;
+        background-image:url("../css/svg/Menu2-ligne.svg");
+        transform:rotate(180deg); 
+        margin-right:5vw;    
+    }
+    .l-c-f h2::after{
+    content:"";
+        display:inline-block;
+        width:20vw;
+        height: 1vh;
+        background-size:20vw 1vh;
+        background-image:url("../css/svg/Menu2-ligne.svg");
+        margin-left:5vw;     
+    }
+
+    .l-d-p h2::before{
+        content:"";
+        display:inline-block;
+        width:20vw;
+        height: 1vh;
+        background-size:20vw 1vh;
+        background-image:url("../css/svg/Menu3-ligne.svg");
+        margin-right:5vw;    
+    }
+    .l-d-p h2::after{
+        content:"";
+        display:inline-block;
+        width:20vw;
+        height: 1vh;
+        background-size:20vw 1vh;
+        background-image:url("../css/svg/Menu3-ligne.svg");
+        transform:scaleX(-1); 
+        margin-left:5vw;     
+    }
+
+    .l-p-d-g h2::before{
+        content:"";
+        display:inline-block;
+        width:20vw;
+        height: 1vh;
+        background-size:20vw 1vh;
+        background-image:url("../css/svg/Menu4-ligne.svg");
+        margin-right:5vw;    
+    }
+    .l-p-d-g h2::after{
+        content:"";
+        display:inline-block;
+        width:20vw;
+        height: 1vh;
+        background-size:20vw 1vh;
+        background-image:url("../css/svg/Menu4-ligne.svg");
+        transform:scaleX(-1); 
+        margin-left:5vw;     
+    }
+}
+@media screen and (max-width: 576px){
+    
+    // titre de bas de page pour remonter
+    
+    .lien_menu{
+        text-align:center;
+        a{
+            text-decoration: none;
+        }
+    }
+    
+    .main__menu{
+        margin:0 17px;
+    }
+    
+    // flexbox pour menu sans tableau
+    h2{
+        text-align:center;
+    }
+    .repas__prix{
+        display: flex;
+        flex-direction: column;
+        text-align: center;    
+    }
+}
+@media screen and (min-width: 577px){
+    .main__menu{
+        margin:0 20px;
+    }
+    article h2{
+        text-align:center;
+    }
+    .repas__prix{
+        display:flex;
+        justify-content: space-between;
+
+    }
+    .lien_menu{
+        text-align:center;
+        a{
+            text-decoration: none;
+            color:#3d1319;
+        }
+    }
+    
+}    
+@media screen and (min-width:768px){
+    body{
+        margin-bottom:9vh;
+    }
+    header{
+        height:12vh;
+        line-height: 12vh;
+        margin-bottom:35px;
+    }
+    .main__index{
+        grid-template-columns:1fr 1fr;
+        grid-gap: 35px;
+        max-width:579px;//calc($width*+35);
+        margin:auto;
+    }
+    
+    footer{
+        height:5.5vh;
+        line-height: 5.5vh;
+    }
+}
+@media screen and (min-width: 992px){
+
+    .main__index{
+        grid-template-columns:1fr 1fr;
+        grid-gap: 35px;
+        
+        
+    }    
+}
+@media screen and (min-width:1280px){
+    .main__index{
+        max-width:968px;
+    }
+}
+
+
+//background des menus
+
+@each $background in $backgrounds{
+    .page__#{nth($background, 1)}{
+        background-color: nth($background, 2);
+    }
+}
+
+// travail menu1
+
+
+//animation pour les h1
+
+@each $trait in $traits{
+    .#{nth($trait, 1)} .#{nth($trait, 2)} h2{
+
+        padding-bottom: 3px;
+        background:
+            linear-gradient(to top, #3d1319  0%, #3d1319 3px, transparent 1px) no-repeat;
+        background-size: 0 100%;
+        background-position:bottom;
+        transition: background-size 1500ms;
+               
+        &:hover{
+        background-size: nth($trait, 3) 100%;
+        
+        }     
+    }
+}

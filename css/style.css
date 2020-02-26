@@ -1,0 +1,565 @@
+@charset "UTF-8";
+@keyframes points {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes wiggle {
+  0% {
+    translate: 0px;
+  }
+  25% {
+    translate: 10px;
+  }
+  50% {
+    translate: 0px;
+  }
+  75% {
+    translate: -10px;
+  }
+  100% {
+    translate: 0px;
+  }
+}
+body {
+  box-sizing: border-box;
+  margin: 0 0 0 0;
+  padding: 0;
+  height: auto;
+}
+
+header {
+  background-color: #569c87;
+  height: 7vh;
+  text-align: center;
+  line-height: 7vh;
+  margin-bottom: 3vh;
+}
+header a {
+  color: #fcca46;
+  text-decoration: none;
+  font-size: 2em;
+  opacity: 1;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 3vh;
+}
+main a {
+  color: transparent;
+}
+main a:hover {
+  transform: scale(1.1);
+  opacity: 0.5;
+}
+
+.page__menu h1 {
+  text-align: center;
+}
+
+.la-note-enchantee {
+  background-color: #fcdfda;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  justify-self: center;
+  width: 272px;
+  height: 390px;
+}
+.la-note-enchantee a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  text-align: center;
+}
+.la-note-enchantee a .menu {
+  padding: 17vh 0 15vh 0;
+}
+.la-note-enchantee a h1 {
+  margin-top: 0;
+}
+
+.le-chic-a-la-française {
+  background-color: #fef5fd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  justify-self: center;
+  width: 272px;
+  height: 390px;
+}
+.le-chic-a-la-française a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  text-align: center;
+}
+.le-chic-a-la-française a .menu {
+  padding: 17vh 0 15vh 0;
+}
+.le-chic-a-la-française a h1 {
+  margin-top: 0;
+}
+
+.le-délice-des-papilles {
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  justify-self: center;
+  width: 272px;
+  height: 390px;
+}
+.le-délice-des-papilles a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  text-align: center;
+}
+.le-délice-des-papilles a .menu {
+  padding: 17vh 0 15vh 0;
+}
+.le-délice-des-papilles a h1 {
+  margin-top: 0;
+}
+
+.la-palette-du-gout {
+  background-color: #fdfffd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  justify-self: center;
+  width: 272px;
+  height: 390px;
+}
+.la-palette-du-gout a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  text-align: center;
+}
+.la-palette-du-gout a .menu {
+  padding: 17vh 0 15vh 0;
+}
+.la-palette-du-gout a h1 {
+  margin-top: 0;
+}
+
+.la-note-enchantee h1, .la-note-enchantee p, .page__la-note-enchantee h1, .page__la-note-enchantee p {
+  color: #3d1319;
+}
+.la-note-enchantee h2, .la-note-enchantee .prix, .page__la-note-enchantee h2, .page__la-note-enchantee .prix {
+  font-weight: bold;
+}
+
+.le-chic-a-la-française h1, .page__le-chic-a-la-française h1 {
+  color: transparent;
+  background: linear-gradient(160deg, #e38a12, #8f5aff);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.le-chic-a-la-française p, .page__le-chic-a-la-française p {
+  color: #c77412;
+}
+
+.le-délice-des-papilles h1, .page__le-délice-des-papilles h1 {
+  color: transparent;
+  background: linear-gradient(to right, #0023db, #2495fb);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.le-délice-des-papilles p, .page__le-délice-des-papilles p {
+  color: #0887fb;
+}
+
+.la-palette-du-gout h1, .page__la-palette-du-gout h1 {
+  color: transparent;
+  background: linear-gradient(to right, #3e923a, #beff7f);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.la-palette-du-gout p, .page__la-palette-du-gout p {
+  color: #72bf56;
+}
+
+#prochainement {
+  width: 272px;
+  height: 46px;
+  border-radius: 7px;
+  background-color: #569c87;
+  color: #fcca46;
+  margin: 3vh auto;
+  text-align: center;
+  overflow: hidden;
+  line-height: 5vh;
+}
+#prochainement p {
+  margin: 0 0 0 10px;
+}
+#prochainement p::after {
+  content: "";
+  margin-left: 10px;
+  display: inline-block;
+  background-color: #fcca46;
+  border-radius: 50px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #fcca46;
+  opacity: 0;
+}
+#prochainement:hover p {
+  translate: -14%;
+}
+#prochainement:hover p::after {
+  animation-name: points;
+  animation-duration: 1000ms;
+  animation-delay: 500ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: space-between;
+  height: 3.5vh;
+  line-height: 3.5vh;
+  background-color: #569c87;
+  color: #fcca46;
+}
+footer a {
+  margin: 0 5vw;
+  text-decoration: none;
+  color: #fcca46;
+}
+footer .footer__btn:hover {
+  animation-name: wiggle;
+  animation-duration: 550ms;
+  animation-iteration-count: infinite;
+}
+
+@media screen and (min-width: 349px) {
+  .l-n-e h2::before {
+    content: "";
+    display: inline-block;
+    width: 20vw;
+    height: 1vh;
+    background-size: 20vw 1vh;
+    background-image: url("../css/svg/Menu1-ligneG.svg");
+    margin-right: 5vw;
+  }
+
+  .l-n-e h2::after {
+    content: "";
+    display: inline-block;
+    width: 20vw;
+    height: 1vh;
+    background-size: 20vw 1vh;
+    background-image: url("../css/svg/Menu1-ligneD.svg");
+    margin-left: 5vw;
+  }
+
+  .l-c-f h2::before {
+    content: "";
+    display: inline-block;
+    width: 20vw;
+    height: 1vh;
+    background-size: 20vw 1vh;
+    background-image: url("../css/svg/Menu2-ligne.svg");
+    transform: rotate(180deg);
+    margin-right: 5vw;
+  }
+
+  .l-c-f h2::after {
+    content: "";
+    display: inline-block;
+    width: 20vw;
+    height: 1vh;
+    background-size: 20vw 1vh;
+    background-image: url("../css/svg/Menu2-ligne.svg");
+    margin-left: 5vw;
+  }
+
+  .l-d-p h2::before {
+    content: "";
+    display: inline-block;
+    width: 20vw;
+    height: 1vh;
+    background-size: 20vw 1vh;
+    background-image: url("../css/svg/Menu3-ligne.svg");
+    margin-right: 5vw;
+  }
+
+  .l-d-p h2::after {
+    content: "";
+    display: inline-block;
+    width: 20vw;
+    height: 1vh;
+    background-size: 20vw 1vh;
+    background-image: url("../css/svg/Menu3-ligne.svg");
+    transform: scaleX(-1);
+    margin-left: 5vw;
+  }
+
+  .l-p-d-g h2::before {
+    content: "";
+    display: inline-block;
+    width: 20vw;
+    height: 1vh;
+    background-size: 20vw 1vh;
+    background-image: url("../css/svg/Menu4-ligne.svg");
+    margin-right: 5vw;
+  }
+
+  .l-p-d-g h2::after {
+    content: "";
+    display: inline-block;
+    width: 20vw;
+    height: 1vh;
+    background-size: 20vw 1vh;
+    background-image: url("../css/svg/Menu4-ligne.svg");
+    transform: scaleX(-1);
+    margin-left: 5vw;
+  }
+}
+@media screen and (max-width: 576px) {
+  .lien_menu {
+    text-align: center;
+  }
+  .lien_menu a {
+    text-decoration: none;
+  }
+
+  .main__menu {
+    margin: 0 17px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .repas__prix {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 577px) {
+  .main__menu {
+    margin: 0 20px;
+  }
+
+  article h2 {
+    text-align: center;
+  }
+
+  .repas__prix {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .lien_menu {
+    text-align: center;
+  }
+  .lien_menu a {
+    text-decoration: none;
+    color: #3d1319;
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    margin-bottom: 9vh;
+  }
+
+  header {
+    height: 12vh;
+    line-height: 12vh;
+    margin-bottom: 35px;
+  }
+
+  .main__index {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 35px;
+    max-width: 579px;
+    margin: auto;
+  }
+
+  footer {
+    height: 5.5vh;
+    line-height: 5.5vh;
+  }
+}
+@media screen and (min-width: 992px) {
+  .main__index {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 35px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main__index {
+    max-width: 968px;
+  }
+}
+.page__la-note-enchantee {
+  background-color: #fcdfda;
+}
+
+.page__le-chic-a-la-française {
+  background-color: #fef5fd;
+}
+
+.page__le-délice-des-papilles {
+  background-color: #f9f9f9;
+}
+
+.page__la-palette-du-gout {
+  background-color: #fdfffd;
+}
+
+.l-n-e .entrees h2 {
+  padding-bottom: 3px;
+  background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
+  background-size: 0 100%;
+  background-position: bottom;
+  transition: background-size 1500ms;
+}
+.l-n-e .entrees h2:hover {
+  background-size: 80px 100%;
+}
+
+.l-n-e .plats h2 {
+  padding-bottom: 3px;
+  background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
+  background-size: 0 100%;
+  background-position: bottom;
+  transition: background-size 1500ms;
+}
+.l-n-e .plats h2:hover {
+  background-size: 140px 100%;
+}
+
+.l-n-e .desserts h2 {
+  padding-bottom: 3px;
+  background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
+  background-size: 0 100%;
+  background-position: bottom;
+  transition: background-size 1500ms;
+}
+.l-n-e .desserts h2:hover {
+  background-size: 82px 100%;
+}
+
+.l-c-f .entrees h2 {
+  padding-bottom: 3px;
+  background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
+  background-size: 0 100%;
+  background-position: bottom;
+  transition: background-size 1500ms;
+}
+.l-c-f .entrees h2:hover {
+  background-size: 160px 100%;
+}
+
+.l-c-f .plats h2 {
+  padding-bottom: 3px;
+  background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
+  background-size: 0 100%;
+  background-position: bottom;
+  transition: background-size 1500ms;
+}
+.l-c-f .plats h2:hover {
+  background-size: 121px 100%;
+}
+
+.l-c-f .desserts h2 {
+  padding-bottom: 3px;
+  background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
+  background-size: 0 100%;
+  background-position: bottom;
+  transition: background-size 1500ms;
+}
+.l-c-f .desserts h2:hover {
+  background-size: 144px 100%;
+}
+
+.l-d-p .entrees h2 {
+  padding-bottom: 3px;
+  background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
+  background-size: 0 100%;
+  background-position: bottom;
+  transition: background-size 1500ms;
+}
+.l-d-p .entrees h2:hover {
+  background-size: 141px 100%;
+}
+
+.l-d-p .plats h2 {
+  padding-bottom: 3px;
+  background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
+  background-size: 0 100%;
+  background-position: bottom;
+  transition: background-size 1500ms;
+}
+.l-d-p .plats h2:hover {
+  background-size: 127px 100%;
+}
+
+.l-d-p .desserts h2 {
+  padding-bottom: 3px;
+  background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
+  background-size: 0 100%;
+  background-position: bottom;
+  transition: background-size 1500ms;
+}
+.l-d-p .desserts h2:hover {
+  background-size: 121px 100%;
+}
+
+.l-p-d-g .entrees h2 {
+  padding-bottom: 3px;
+  background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
+  background-size: 0 100%;
+  background-position: bottom;
+  transition: background-size 1500ms;
+}
+.l-p-d-g .entrees h2:hover {
+  background-size: 57px 100%;
+}
+
+.l-p-d-g .plats h2 {
+  padding-bottom: 3px;
+  background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
+  background-size: 0 100%;
+  background-position: bottom;
+  transition: background-size 1500ms;
+}
+.l-p-d-g .plats h2:hover {
+  background-size: 112px 100%;
+}
+
+.l-p-d-g .desserts h2 {
+  padding-bottom: 3px;
+  background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
+  background-size: 0 100%;
+  background-position: bottom;
+  transition: background-size 1500ms;
+}
+.l-p-d-g .desserts h2:hover {
+  background-size: 122px 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
