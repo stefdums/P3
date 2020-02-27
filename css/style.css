@@ -38,6 +38,12 @@ body {
   margin: 0 0 0 0;
   padding: 0;
   height: auto;
+  font-size: 16px;
+}
+body h2 {
+  font-size: 1.1em;
+  font-weight: lighter;
+  position: relative;
 }
 
 header {
@@ -70,6 +76,23 @@ main a:hover {
 .page__menu h1 {
   text-align: center;
 }
+.page__menu h1 i {
+  display: block;
+  font-size: 2.5em;
+  color: transparent;
+  background: linear-gradient(to left, #f04e5f, #f6916a);
+  background-clip: text;
+  margin-bottom: 2px;
+}
+
+.lien_menu {
+  margin: 35px auto;
+  text-align: center;
+}
+.lien_menu a {
+  color: inherit;
+  text-decoration: none;
+}
 
 .la-note-enchantee {
   background-color: #fcdfda;
@@ -79,14 +102,13 @@ main a:hover {
   height: 390px;
 }
 .la-note-enchantee a {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   text-decoration: none;
   text-align: center;
-}
-.la-note-enchantee a .menu {
-  padding: 17vh 0 15vh 0;
+  justify-content: center;
 }
 .la-note-enchantee a h1 {
   margin-top: 0;
@@ -100,14 +122,13 @@ main a:hover {
   height: 390px;
 }
 .le-chic-a-la-française a {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   text-decoration: none;
   text-align: center;
-}
-.le-chic-a-la-française a .menu {
-  padding: 17vh 0 15vh 0;
+  justify-content: center;
 }
 .le-chic-a-la-française a h1 {
   margin-top: 0;
@@ -121,14 +142,13 @@ main a:hover {
   height: 390px;
 }
 .le-délice-des-papilles a {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   text-decoration: none;
   text-align: center;
-}
-.le-délice-des-papilles a .menu {
-  padding: 17vh 0 15vh 0;
+  justify-content: center;
 }
 .le-délice-des-papilles a h1 {
   margin-top: 0;
@@ -142,20 +162,30 @@ main a:hover {
   height: 390px;
 }
 .la-palette-du-gout a {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   text-decoration: none;
   text-align: center;
-}
-.la-palette-du-gout a .menu {
-  padding: 17vh 0 15vh 0;
+  justify-content: center;
 }
 .la-palette-du-gout a h1 {
   margin-top: 0;
 }
 
-.la-note-enchantee h1, .la-note-enchantee p, .page__la-note-enchantee h1, .page__la-note-enchantee p {
+.la-note-enchantee h1, .page__la-note-enchantee h1 {
+  color: #3d1319;
+}
+.la-note-enchantee h1 i, .page__la-note-enchantee h1 i {
+  display: block;
+  font-size: 2.5em;
+  color: transparent;
+  background: linear-gradient(to left, #f04e5f, #f6916a);
+  background-clip: text;
+  margin-bottom: 2px;
+}
+.la-note-enchantee p, .page__la-note-enchantee p {
   color: #3d1319;
 }
 .la-note-enchantee h2, .la-note-enchantee .prix, .page__la-note-enchantee h2, .page__la-note-enchantee .prix {
@@ -167,6 +197,18 @@ main a:hover {
   background: linear-gradient(160deg, #e38a12, #8f5aff);
   background-clip: text;
   -webkit-background-clip: text;
+}
+.le-chic-a-la-française .entrees, .page__le-chic-a-la-française .entrees {
+  color: #c67412;
+}
+.le-chic-a-la-française .plats, .page__le-chic-a-la-française .plats {
+  color: #a56799;
+}
+.le-chic-a-la-française .plats::before, .page__le-chic-a-la-française .plats::before {
+  background-color: blue;
+}
+.le-chic-a-la-française .desserts, .page__le-chic-a-la-française .desserts {
+  color: #6e4ccc;
 }
 .le-chic-a-la-française p, .page__le-chic-a-la-française p {
   color: #c77412;
@@ -270,28 +312,6 @@ footer .footer__btn:hover {
     height: 1vh;
     background-size: 20vw 1vh;
     background-image: url("../css/svg/Menu1-ligneD.svg");
-    margin-left: 5vw;
-  }
-
-  .l-c-f h2::before {
-    content: "";
-    display: inline-block;
-    width: 20vw;
-    height: 1vh;
-    background-size: 20vw 1vh;
-    background-image: url("../css/svg/Menu2-ligne.svg");
-    transform: rotate(180deg);
-    margin-right: 5vw;
-  }
-
-  .l-c-f h2::after {
-    content: "";
-    display: inline-block;
-    width: 20vw;
-    height: 1vh;
-    background-size: 20vw 1vh;
-    background-image: url("../css/svg/Menu2-ligne.svg");
-    margin-left: 5vw;
   }
 
   .l-d-p h2::before {
@@ -302,6 +322,9 @@ footer .footer__btn:hover {
     background-size: 20vw 1vh;
     background-image: url("../css/svg/Menu3-ligne.svg");
     margin-right: 5vw;
+    position: absolute;
+    left: 0;
+    top: 25%;
   }
 
   .l-d-p h2::after {
@@ -313,6 +336,9 @@ footer .footer__btn:hover {
     background-image: url("../css/svg/Menu3-ligne.svg");
     transform: scaleX(-1);
     margin-left: 5vw;
+    position: absolute;
+    right: 0;
+    top: 25%;
   }
 
   .l-p-d-g h2::before {
@@ -323,6 +349,9 @@ footer .footer__btn:hover {
     background-size: 20vw 1vh;
     background-image: url("../css/svg/Menu4-ligne.svg");
     margin-right: 5vw;
+    position: absolute;
+    left: 0;
+    top: 25%;
   }
 
   .l-p-d-g h2::after {
@@ -334,16 +363,94 @@ footer .footer__btn:hover {
     background-image: url("../css/svg/Menu4-ligne.svg");
     transform: scaleX(-1);
     margin-left: 5vw;
+    position: absolute;
+    right: 0;
+    top: 25%;
+  }
+}
+@media screen and (min-width: 450px) {
+  .l-c-f .entrees h2::after {
+    content: "";
+    display: inline-block;
+    width: 20vw;
+    height: 1vh;
+    background-size: 20vw 1vh;
+    background-image: url("../css/svg/Menu2-ligne.svg");
+    margin-right: 5vw;
+    position: absolute;
+    right: -7vw;
+    top: 25%;
+  }
+
+  .l-c-f .entrees h2::before {
+    content: "";
+    display: inline-block;
+    width: 20vw;
+    height: 1vh;
+    background-size: 20vw 1vh;
+    background-image: url("../css/svg/Menu2-ligne.svg");
+    transform: rotate(180deg);
+    margin-left: 5vw;
+    position: absolute;
+    left: -7vw;
+    top: 25%;
+  }
+
+  .l-c-f .plats h2::after {
+    content: "";
+    display: inline-block;
+    width: 20vw;
+    height: 1vh;
+    background-size: 20vw 1vh;
+    background-image: url("../css/svg/Menu2-ligne-plat.svg");
+    margin-right: 5vw;
+    position: absolute;
+    right: -7vw;
+    top: 25%;
+  }
+
+  .l-c-f .plats h2::before {
+    content: "";
+    display: inline-block;
+    width: 20vw;
+    height: 1vh;
+    background-size: 20vw 1vh;
+    background-image: url("../css/svg/Menu2-ligne-plat.svg");
+    transform: rotate(180deg);
+    margin-left: 5vw;
+    position: absolute;
+    left: -7vw;
+    top: 25%;
+  }
+
+  .l-c-f .desserts h2::after {
+    content: "";
+    display: inline-block;
+    width: 20vw;
+    height: 1vh;
+    background-size: 20vw 1vh;
+    background-image: url("../css/svg/Menu2-ligne-dessert.svg");
+    margin-right: 5vw;
+    position: absolute;
+    right: -7vw;
+    top: 25%;
+  }
+
+  .l-c-f .desserts h2::before {
+    content: "";
+    display: inline-block;
+    width: 20vw;
+    height: 1vh;
+    background-size: 20vw 1vh;
+    background-image: url("../css/svg/Menu2-ligne-dessert.svg");
+    transform: rotate(180deg);
+    margin-left: 5vw;
+    position: absolute;
+    left: -7vw;
+    top: 25%;
   }
 }
 @media screen and (max-width: 576px) {
-  .lien_menu {
-    text-align: center;
-  }
-  .lien_menu a {
-    text-decoration: none;
-  }
-
   .main__menu {
     margin: 0 17px;
   }
@@ -360,7 +467,8 @@ footer .footer__btn:hover {
 }
 @media screen and (min-width: 577px) {
   .main__menu {
-    margin: 0 20px;
+    margin: 0 auto;
+    max-width: 600px;
   }
 
   article h2 {
@@ -465,101 +573,101 @@ footer .footer__btn:hover {
 
 .l-c-f .entrees h2 {
   padding-bottom: 3px;
-  background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
+  background: linear-gradient(to top, #c67412 0%, #c67412 3px, transparent 1px) no-repeat;
   background-size: 0 100%;
   background-position: bottom;
   transition: background-size 1500ms;
 }
 .l-c-f .entrees h2:hover {
-  background-size: 160px 100%;
+  background-size: 260px 100%;
 }
 
 .l-c-f .plats h2 {
   padding-bottom: 3px;
-  background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
+  background: linear-gradient(to top, #a56799 0%, #a56799 3px, transparent 1px) no-repeat;
   background-size: 0 100%;
   background-position: bottom;
   transition: background-size 1500ms;
 }
 .l-c-f .plats h2:hover {
-  background-size: 121px 100%;
+  background-size: 191px 100%;
 }
 
 .l-c-f .desserts h2 {
   padding-bottom: 3px;
-  background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
+  background: linear-gradient(to top, #6e4ccc 0%, #6e4ccc 3px, transparent 1px) no-repeat;
   background-size: 0 100%;
   background-position: bottom;
   transition: background-size 1500ms;
 }
 .l-c-f .desserts h2:hover {
-  background-size: 144px 100%;
+  background-size: 230px 100%;
 }
 
 .l-d-p .entrees h2 {
   padding-bottom: 3px;
-  background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
+  background: linear-gradient(to top, #0228dd 0%, #0228dd 3px, transparent 1px) no-repeat;
   background-size: 0 100%;
   background-position: bottom;
   transition: background-size 1500ms;
 }
 .l-d-p .entrees h2:hover {
-  background-size: 141px 100%;
+  background-size: 226px 100%;
 }
 
 .l-d-p .plats h2 {
   padding-bottom: 3px;
-  background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
+  background: linear-gradient(to top, #0670f3 0%, #0670f3 3px, transparent 1px) no-repeat;
   background-size: 0 100%;
   background-position: bottom;
   transition: background-size 1500ms;
 }
 .l-d-p .plats h2:hover {
-  background-size: 127px 100%;
+  background-size: 206px 100%;
 }
 
 .l-d-p .desserts h2 {
   padding-bottom: 3px;
-  background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
+  background: linear-gradient(to top, #229df9 0%, #229df9 3px, transparent 1px) no-repeat;
   background-size: 0 100%;
   background-position: bottom;
   transition: background-size 1500ms;
 }
 .l-d-p .desserts h2:hover {
-  background-size: 121px 100%;
+  background-size: 200px 100%;
 }
 
 .l-p-d-g .entrees h2 {
   padding-bottom: 3px;
-  background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
+  background: linear-gradient(to top, #41963c 0%, #41963c 3px, transparent 1px) no-repeat;
   background-size: 0 100%;
   background-position: bottom;
   transition: background-size 1500ms;
 }
 .l-p-d-g .entrees h2:hover {
-  background-size: 57px 100%;
+  background-size: 89px 100%;
 }
 
 .l-p-d-g .plats h2 {
   padding-bottom: 3px;
-  background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
+  background: linear-gradient(to top, #75c158 0%, #75c158 3px, transparent 1px) no-repeat;
   background-size: 0 100%;
   background-position: bottom;
   transition: background-size 1500ms;
 }
 .l-p-d-g .plats h2:hover {
-  background-size: 112px 100%;
+  background-size: 180px 100%;
 }
 
 .l-p-d-g .desserts h2 {
   padding-bottom: 3px;
-  background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
+  background: linear-gradient(to top, #b0f377 0%, #b0f377 3px, transparent 1px) no-repeat;
   background-size: 0 100%;
   background-position: bottom;
   transition: background-size 1500ms;
 }
 .l-p-d-g .desserts h2:hover {
-  background-size: 122px 100%;
+  background-size: 197px 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -7,45 +7,49 @@ $fond-2:rgb(254,245,253);
 $fond-3:rgb(249,249,249);
 $fond-4:rgb(253,255,253);
 
-//entréé menu2
+//menu1
+$color1:#3d1319;
+//menu2
 $entrée2:#c67412;
 $plat2:#a56799;
 $dessert2:#6e4ccc;
 //menu3
 $entrée3:#0228dd;
-$plat3:#0228dd;
+$plat3:#0670f3;
 $dessert3:#229df9;
+
+
+//variables lignes l-c-f
+
+$couleurs:
+    entrees url("../css/svg/Menu2-ligne.svg"),
+    plats url("../css/svg/Menu2-ligne-plat.svg"),
+    desserts url("../css/svg/Menu2-ligne-dessert.svg");
+    
 
 //variables tailles menus
 
 $height: 390px;
 $width:272px;
 
-//variables tailles h2 l-n-e
+//variables tailles h2 
 
 $traits:
-      l-n-e entrees 80px,
-      l-n-e plats 140px,
-      l-n-e desserts 82px,
+      l-n-e entrees 80px $color1,
+      l-n-e plats 140px $color1,
+      l-n-e desserts 82px $color1,
 
-      l-c-f entrees 160px,
-      l-c-f plats 121px,
-      l-c-f desserts 144px,
+      l-c-f entrees 260px $entrée2,
+      l-c-f plats 191px $plat2,
+      l-c-f desserts 230px $dessert2,
 
-      l-d-p entrees 141px,
-      l-d-p plats 127px,
-      l-d-p desserts 121px,
+      l-d-p entrees 226px $entrée3,
+      l-d-p plats 206px $plat3,
+      l-d-p desserts 200px $dessert3,
   
-      l-p-d-g entrees 57px,
-      l-p-d-g plats 112px,
-      l-p-d-g desserts 122px;
-
-
-
-
-
-      
-
+      l-p-d-g entrees 89px #41963c,
+      l-p-d-g plats 180px #75c158,
+      l-p-d-g desserts 197px #b0f377;
 
 $backgrounds:
    la-note-enchantee rgb(252,223,218),
@@ -90,10 +94,3 @@ $backgrounds:
    }
 
 }
-
-
-// @each $background in $backgrounds{
-//       .page__#{nth($background, 1)}{
-//           background-color: nth($background, 2);
-//       }
-//   }
