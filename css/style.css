@@ -91,7 +91,6 @@ header {
   height: 7vh;
   text-align: center;
   line-height: 7vh;
-  margin-bottom: 3vh;
   font-family: "montserratextrabold";
 }
 header a {
@@ -99,6 +98,14 @@ header a {
   text-decoration: none;
   font-size: 2em;
   opacity: 1;
+}
+
+.nom-restaurant {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5em;
+  color: black !important;
 }
 
 main {
@@ -119,6 +126,7 @@ main .menu p {
 }
 
 .main__menu {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 .main__menu .prix {
@@ -462,6 +470,11 @@ footer .footer__btn:hover {
   animation-iteration-count: infinite;
 }
 
+@media screen and (max-width: 575px) {
+  .nom-restaurant {
+    display: none;
+  }
+}
 @media screen and (min-width: 576px) {
   body {
     margin-bottom: 64px;
@@ -691,10 +704,6 @@ footer .footer__btn:hover {
 }
 .l-p-d-g .desserts h2:hover {
   background-size: 100% 100%;
-}
-
-.main__menu {
-  border: solid 1px black;
 }
 
 /*# sourceMappingURL=style.css.map */

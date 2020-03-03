@@ -72,30 +72,24 @@ $entrée3:#0228dd;
 $plat3:#0670f3;
 $dessert3:#229df9;
 
-
-//variables tailles menus
-
-$height: 390px;
-$width:272px;
-
 //variables tailles h2 
 
 $traits:
-      l-n-e entrees 80px $color1,
-      l-n-e plats 140px $color1,
-      l-n-e desserts 82px $color1,
+      l-n-e entrees $color1,
+      l-n-e plats $color1,
+      l-n-e desserts $color1,
 
-      l-c-f entrees 260px $entrée2,
-      l-c-f plats 191px $plat2,
-      l-c-f desserts 230px $dessert2,
+      l-c-f entrees $entrée2,
+      l-c-f plats $plat2,
+      l-c-f desserts $dessert2,
 
-      l-d-p entrees 226px $entrée3,
-      l-d-p plats 206px $plat3,
-      l-d-p desserts 200px $dessert3,
+      l-d-p entrees $entrée3,
+      l-d-p plats $plat3,
+      l-d-p desserts $dessert3,
   
-      l-p-d-g entrees 89px #41963c,
-      l-p-d-g plats 180px #75c158,
-      l-p-d-g desserts 197px #b0f377;
+      l-p-d-g entrees #41963c,
+      l-p-d-g plats#75c158,
+      l-p-d-g desserts#b0f377;
 
 $backgrounds:
       la-note-enchantee rgb(252,223,218) l-n-e,
