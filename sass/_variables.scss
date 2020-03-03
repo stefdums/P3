@@ -1,3 +1,57 @@
+@font-face {
+      font-family: 'montserratextrabold';
+      src: url(../css/fonts/montserrat-extrabold-webfont.woff2) format('woff2'),
+           url(../css/fonts/montserrat-extrabold-webfont.woff) format('woff');
+      font-weight: normal;
+      font-style: normal;
+  
+  }  
+  @font-face {
+      font-family: 'montserratsemibold';
+      src: url(../css/fonts/montserrat-semibold-webfont.woff2) format('woff2'),
+           url(../css/fonts/montserrat-semibold-webfont.woff) format('woff');
+      font-weight: normal;
+      font-style: normal;
+  
+  }
+  @font-face {
+      font-family: 'mkbritishwritingregular';
+      src: url(../css/fonts/mkbritishwriting-webfont.woff2) format('woff2'),
+           url(../css/fonts/mkbritishwriting.ttf) format('ttf'),
+           url(../css/fonts/mkbritishwriting-webfont.woff) format('woff');
+      font-weight: normal;
+      font-style: normal;
+}
+@font-face {
+      font-family: 'croissant_oneregular';
+      src: url(../css/fonts/croissantone-regular-webfont.woff2) format('woff2'),
+           url(../css/fonts/croissantone-regular-webfont.woff) format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+@font-face {
+font-family: 'alluraregular';
+src: url(../css/fonts/allura-regular-webfont.woff2) format('woff2'),
+      url(../css/fonts/allura-regular-webfont.woff) format('woff');
+font-weight: normal;
+font-style: normal;
+
+}
+@font-face {
+      font-family: 'josschriftregular';
+      src: url(../css/fonts/josschrift-webfont.woff2) format('woff2'),
+           url(../css/fonts/josschrift-webfont.woff) format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+@font-face {
+      font-family: 'kaushan_scriptregular';
+      src: url(../css/fonts/kaushanscript-regular-webfont.woff2) format('woff2'),
+            url(../css/fonts/kaushanscript-regular-webfont.woff) format('woff');
+      font-weight: normal;
+      font-style: normal;
+
+}  
 //variables couleurs
 
 $vert:rgb(86,156,135);
@@ -18,14 +72,6 @@ $entrée3:#0228dd;
 $plat3:#0670f3;
 $dessert3:#229df9;
 
-
-//variables lignes l-c-f
-
-$couleurs:
-    entrees url("../css/svg/Menu2-ligne.svg"),
-    plats url("../css/svg/Menu2-ligne-plat.svg"),
-    desserts url("../css/svg/Menu2-ligne-dessert.svg");
-    
 
 //variables tailles menus
 
@@ -52,10 +98,10 @@ $traits:
       l-p-d-g desserts 197px #b0f377;
 
 $backgrounds:
-   la-note-enchantee rgb(252,223,218),
-   le-chic-a-la-française rgb(254,245,253),
-   le-délice-des-papilles rgb(249,249,249),
-   la-palette-du-gout rgb(253,255,253);
+      la-note-enchantee rgb(252,223,218) l-n-e,
+      le-chic-a-la-française rgb(254,245,253) l-c-f,
+      le-délice-des-papilles rgb(249,249,249) l-d-p,
+      la-palette-du-gout rgb(253,255,253) l-p-d-g;
 
 
 @keyframes points{

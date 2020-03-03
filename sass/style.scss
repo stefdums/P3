@@ -7,9 +7,7 @@ body{
     height:auto;
     font-size:16px;
     h2{
-        font-size:1.1em;
-        font-weight:lighter;
-        position:relative;
+        font-size:1.1em;    
     }
 }
 header{
@@ -18,6 +16,7 @@ header{
     text-align:center;
     line-height: 7vh;
     margin-bottom:3vh;
+    font-family: 'montserratextrabold';
     a{
         color:$jaune;
         text-decoration:none;
@@ -29,18 +28,27 @@ main{
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 3vh;
-       
     a{
-        color:transparent;
-    }
-
+        color:inherit;
+    }   
     a:hover{
         transform: scale(1.1);
         opacity: 0.5;
     }
-    
+    .menu p{
+        margin-top:0;
+        font-size:34px;
+    }
+}
+.main__menu{
+    text-align: center;
+    .prix{
+        font-weight:bold;
+    }
 }
 .page__menu{
+    line-height:2.4em;
+    
     h1{    
         text-align:center;
         i{  
@@ -52,15 +60,25 @@ main{
             margin-bottom:2px;
         }
     }
-}    
+}
+    
 .lien_menu{
     margin: 35px auto;
     text-align:center;
     a{
         color:inherit;
         text-decoration: none;
+        i{
+            font-size:1.2em;
+            color:transparent;
+            background: linear-gradient(to left, #f04e5f, #f6916a);
+            background-clip: text;
+            margin-bottom:2px;
+            margin-right:2px; 
+        }
     }
 }
+
 
 @each $background in $backgrounds {
     .#{nth($background, 1)} {
@@ -85,71 +103,162 @@ main{
         }        
     }
 }
-
+    
 .la-note-enchantee, .page__la-note-enchantee{
+    background-color:$fond-1;
+    font-family: 'mkbritishwritingregular';
+        
     h1{
-        color:$color1;
+        margin-top:50px;
+        color: $color1;
+        font-size: 28px;;
         i{  
             display:block;
-            font-size: 2.5em;
+            font-size: 2em;
             color:transparent;
             background: linear-gradient(to left, #f04e5f, #f6916a);
             background-clip: text;
             margin-bottom:2px;
         }
-    
-    }
-    p{
-        color:$color1;
-    }
-    h2, .prix{
-        font-weight:bold;
     }
 
+    p{
+        color:$color1;           
+    }
+    
+    
+    h2, .prix{  
+        font-size:20px;      
+        color: $color1;
+        font-weight:bold;
+    }
+    .intitule{
+        display:flex;
+        justify-content: space-between;
+        h2{
+            flex-basis:174.5px;
+        }
+        img{
+            width:32%;
+            flex-shrink: 10;
+        
+        }
+    } 
 }
 
 .le-chic-a-la-française, .page__le-chic-a-la-française{
-    
-     h1{
+    font-family:'croissant_oneregular' ;
+    text-align:center;
+    h1{
+        font-size:17px;
+        margin-top:70px;
         color:transparent;
         background: linear-gradient(160deg,#e38a12, #8f5aff );
         background-clip:text;
         -webkit-background-clip: text;
+    }
+    h2{
+
     }
     .entrees{
         color:$entrée2;
     }
     .plats{
         color:$plat2;
-        &::before{
-            background-color:blue;
-        }
     }
     .desserts{
         color:$dessert2;
     }
-
-
-    
     p{
-        color:#c77412
-    }   
+        color:#c77412;
+        font-family:'croissant_oneregular';
+    }
+    .l-c-f{
+        
+        background-color:$fond-2;
+        margin:0 auto;
+        max-width:576px;
+        padding:0 10px 65px;
+        font-size: 12.5px;
+        
+    } 
+    .intitule{
+        display:flex;
+        justify-content: space-between;  
+        h2{
+            font-size:15px;
+            flex-basis:300px;
+        } 
+        img{
+            width:30%;   
+            flex-shrink: 10;     
+        }
+        h2 + img{
+            transform: scale(-1);
+        }
+    }    
 }
 
 .le-délice-des-papilles, .page__le-délice-des-papilles{
     h1{
+        
+        font-family:"alluraregular";
+        font-size:1.75em;
+        padding-top:8px;
+        margin-top:70px;
+        margin-bottom:8.5px;
         color:transparent;
         background: linear-gradient(to right, #0023db, #2495fb );
         background-clip:text;
         -webkit-background-clip: text;
     } 
     p{
-        color:#0887fb
-    }   
+        color:#0887fb;
+        font-family: "josschriftregular";
+
+    } 
+    .l-d-p{
+        
+        text-align: center;;
+        background-color:$fond-3;
+        margin:0 auto;
+        max-width:576px;
+        padding:0 10px 65px;
+        h1{
+            font-size:3.5em;
+        }
+        article{
+            font-family: "josschriftregular";
+            font-size: 15px;
+        }
+    }
+
+    .intitule{
+        display:flex;
+        justify-content: space-between;
+        h2{
+            flex-basis:207px;
+            flex-shrink: 0;
+        }
+        img{
+            width:32%;
+            flex-shrink: 10;
+        }
+        h2 + img{
+            transform:scaleX(-1);
+        }
+    }       
 }
 
 .la-palette-du-gout, .page__la-palette-du-gout{
     h1{
+        font-family:'kaushan_scriptregular';
+        font-weight:lighter;
+        font-size:1.7em;
+        padding-top:8px;
+        padding-bottom:24px;
+        margin-top:70px;
+        margin-bottom:8.5px;
         color:transparent;
         background: linear-gradient(to right, #3e923a, #beff7f );
         background-clip:text;
@@ -157,108 +266,66 @@ main{
         
     } 
     p{
-        color:#72bf56
-    }   
-    
+        color:#72bf56;
+        font-family: "josschriftregular";
+    }
+    .l-p-d-g{
+        text-align: center;;
+        background-color:$fond-4;
+        margin:0 auto;
+        max-width:576px;
+        padding:0 10px 65px;
+        article{
+            font-family:'josschriftregular';
+            font-size:15px;
+        }
+    }        
+    .intitule{
+        display:flex;
+        flex-direction: row;
+        justify-content:space-between;
+        h2{
+            flex-basis:153px;
+        }
+        img{
+            width:32%;   
+            flex-shrink: 10;     
+        }
+        h2 + img{
+            transform: scale(-1);
+        }
+    }    
 }
 
-// #prochainement{
-//     display: flex;
-//     justify-content:center;
-//     align-items: center;
-//     width:67vw;
-//     height:5vh;
-//     border-radius: 7px;
-//     background-color:$vert;
-//     color:$jaune;
-//     margin: 3vh auto;
-
-// //animation du bouton prochainement     
-//     #test{
-//         width:67vw;
-//         height:5vh;
-//         position: relative;
-        
-
-
-//         &:hover + .points{
-//             animation-name: test;
-//             animation-duration: 1000ms;
-//             //animation-delay:500ms;
-//             animation-iteration-count:infinite;
-//             animation-direction:alternate;
-//             //animation-fill-mode: both;
-
-//         }
-//     }
-//     p{
-//         line-height: 5vh;
-//         margin: 0 0 0 10vw;
-        
-//     }
-//     .points{
-//         position: absolute;
-//         left: 60vw;
-
-//         .point{
-//             display: inline-block;
-//             background-color: $jaune;
-//             border-radius:50px;
-//             width:7px;
-//             height:7px;
-//             border:1px solid $jaune;
-//             opacity: 1;
-//         }
-//     }   
-// }
-
-
 #prochainement{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
     width:272px;
-    height:46px;
+    height:5vh;
     border-radius: 7px;
     background-color:$vert;
     color:$jaune;
     margin: 3vh auto;
-    text-align:center;
-    overflow: hidden;
-    line-height: 5vh;
 
-    p{
-        margin:0 0 0 10px;
-
-        &::after{
-            content:"";
-            margin-left:10px;
+//animation du bouton prochainement     
+  
+    .points{
+        animation-name: points;
+        animation-duration: 1000ms;
+        animation-iteration-count:infinite;
+        animation-direction:alternate;  
+        .point{
             display: inline-block;
-            background-color:$jaune;
+            background-color: $jaune;
             border-radius:50px;
             width:7px;
             height:7px;
             border:1px solid $jaune;
-            opacity: 0;   
+            opacity: 1;
         }
-    }
-
-    &:hover{
-        p{
-        translate: -14%;
-        
-            &::after{
-            animation-name: points;
-            animation-duration: 1000ms;
-            animation-delay:500ms;
-            animation-iteration-count:infinite;
-            animation-direction:alternate;
-            animation-fill-mode: both;
-            }
-        }
- 
-    }
-
-
+    }   
 }
-
 
 footer{
     position: fixed;
@@ -271,6 +338,7 @@ footer{
     line-height:3.5vh;
     background-color:$vert;
     color:$jaune;
+    font-family: 'montserratsemibold';
     a{
         margin: 0 5vw;
         text-decoration:none;
@@ -283,197 +351,121 @@ footer{
         animation-iteration-count: infinite;
         }
     }    
-       
+
 //encadrage des repas
-@media screen and (min-width:349px) {  
 
-    .l-n-e h2::before{
-        content:"";
-        display:inline-block;
-        width:20vw;
-        height: 1vh;
-        background-size:20vw 1vh;
-        background-image:url("../css/svg/Menu1-ligneG.svg"); 
-        margin-right:5vw;    
+@media screen and (min-width: 576px){
+    body{
+        margin-bottom:64px;
+        background-color:white;
     }
-    .l-n-e h2::after{
-        content:"";
-        display:inline-block;
-        width:20vw;
-        height: 1vh;
-        background-size:20vw 1vh;
-        background-image:url("../css/svg/Menu1-ligneD.svg");
-        //margin-left:5vw;     
+    .main__index{
+        grid-template-columns:1fr 1fr;
+        grid-gap: 35px;
+        max-width:576px;//calc($width*+35);
+        margin:auto;
     }
 
-    .l-d-p h2::before{
-        content:"";
-        display:inline-block;
-        width:20vw;
-        height: 1vh;
-        background-size:20vw 1vh;
-        background-image:url("../css/svg/Menu3-ligne.svg");
-        margin-right:5vw;  
-        position:absolute;
-        left:0;
-        top:25%;    
+    header{
+        height:12vh;
+        line-height: 12vh;
+        margin-bottom:35px;
     }
-    .l-d-p h2::after{
-        content:"";
-        display:inline-block;
-        width:20vw;
-        height: 1vh;
-        background-size:20vw 1vh;
-        background-image:url("../css/svg/Menu3-ligne.svg");
-        transform:scaleX(-1); 
-        margin-left:5vw; 
-        position:absolute;
-        right:0;
-        top:25%;      
-    }
+    .page__menu{
+    background-color:white;
 
-    .l-p-d-g h2::before{
-        content:"";
-        display:inline-block;
-        width:20vw;
-        height: 1vh;
-        background-size:20vw 1vh;
-        background-image:url("../css/svg/Menu4-ligne.svg");
-        margin-right:5vw;  
-        position:absolute;
-        left:0;
-        top:25%;    
     }
-    .l-p-d-g h2::after{
-        content:"";
-        display:inline-block;
-        width:20vw;
-        height: 1vh;
-        background-size:20vw 1vh;
-        background-image:url("../css/svg/Menu4-ligne.svg");
-        transform:scaleX(-1); 
-        margin-left:5vw; 
-        position:absolute;
-        right:0;
-        top:25%;      
-    }
-}
-@media screen and (min-width: 450px){
-    @each $couleur in $couleurs{
-        .l-c-f .#{nth($couleur, 1)} h2::after{
-            content:"";
-            display:inline-block;
-            width:20vw;
-            height: 1vh;
-            background-size:20vw 1vh;
-            background-image:nth($couleur, 2);
-            margin-right:5vw;
-            position:absolute;
-            right:-7vw;
-            top:25%;    
-        }
-        .l-c-f .#{nth($couleur, 1)} h2::before{
-            content:"";
-            display:inline-block;
-            width:20vw;
-            height: 1vh;
-            background-size:20vw 1vh;
-            background-image:nth($couleur, 2);
-            transform:rotate(180deg);
-            margin-left:5vw; 
-            position:absolute;   
-            left:-7vw; 
-            top:25%;
-        }
-    }
-
-}
-@media screen and (max-width: 576px){
-    
     .main__menu{
         margin:0 17px;
+        
     }
-    
-    // flexbox pour menu
-    h2{
-        text-align:center;
-    }
-    .repas__prix{
-        display: flex;
-        flex-direction: column;
-        text-align: center;    
-    }
-}
-@media screen and (min-width: 577px){
-    .main__menu{
-        margin:0 auto;
-        max-width: 600px;
-    }
+
     article h2{
         text-align:center;
     }
     .repas__prix{
         display:flex;
+        flex-direction: row;
+        text-align: center;
         justify-content: space-between;
 
     }
     .lien_menu{
         text-align:center;
         a{
+            font-size:23px;
+            font-weight:bold;
             text-decoration: none;
             color:#3d1319;
         }
     }
+    .l-n-e{        
+        background-color:$fond-1;
+        margin:0 auto;
+        max-width:500px;
+        padding:0 60px;
+
+    }
+    .l-c-f{
+        padding-bottom:65px;
+       
+        h1{
+            font-size:2.5em;
+        }
+        article{
+            display:flex;
+            flex-direction: column;
+            
+        }
+
+        .repas__prix{    
+            width:466px;
+            align-self: center;   
+        }  
+    }
+    .l-d-p{
+        padding-bottom:65px;
+        article{
+            display:flex;
+            flex-direction: column;
+        }
+        .repas__prix{
+            width:452px;
+            align-self: center;
     
-}    
-@media screen and (min-width:768px){
-    body{
-        margin-bottom:9vh;
+        }
     }
-    header{
-        height:12vh;
-        line-height: 12vh;
-        margin-bottom:35px;
-    }
-    .main__index{
-        grid-template-columns:1fr 1fr;
-        grid-gap: 35px;
-        max-width:579px;//calc($width*+35);
-        margin:auto;
+    .l-p-d-g{
+        
+        h1{
+            font-size:3.5em;
+        }
+        article{
+            display:flex;
+            flex-direction: column;
+        }
+        .repas__prix{
+            width:477px;
+            align-self: center;
+    
+        }
     }
 
-    
     footer{
         height:5.5vh;
         line-height: 5.5vh;
     }
-}
-@media screen and (min-width: 992px){
+    
+}    
+@media screen and (min-width:768px){
+    
 
-    .main__index{
-        grid-template-columns:1fr 1fr;
-        grid-gap: 35px;
-        
-        
-    }    
-}
-@media screen and (min-width:1280px){
-    .main__index{
-        max-width:968px;
-    }
-}
-
-
-//background des menus
-
-@each $background in $backgrounds{
-    .page__#{nth($background, 1)}{
-        background-color: nth($background, 2);
-    }
+    
+    
+    
 }
 
 //animation pour les h1
-
 @each $trait in $traits{
     .#{nth($trait, 1)} .#{nth($trait, 2)} h2{
 
@@ -481,12 +473,19 @@ footer{
         background:
             linear-gradient(to top, nth($trait, 4)  0%, nth($trait, 4) 3px, transparent 1px) no-repeat;
         background-size: 0 100%;
-        background-position:bottom;
+        background-position:left;
         transition: background-size 1500ms;
                
         &:hover{
-        background-size: nth($trait, 3) 100%;
+        background-size: 100% 100%;
         
         }     
     }
+}
+
+
+
+// a supprimer
+.main__menu{
+    border: solid 1px black;
 }

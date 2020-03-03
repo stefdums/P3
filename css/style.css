@@ -1,4 +1,46 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "montserratextrabold";
+  src: url(../css/fonts/montserrat-extrabold-webfont.woff2) format("woff2"), url(../css/fonts/montserrat-extrabold-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "montserratsemibold";
+  src: url(../css/fonts/montserrat-semibold-webfont.woff2) format("woff2"), url(../css/fonts/montserrat-semibold-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mkbritishwritingregular";
+  src: url(../css/fonts/mkbritishwriting-webfont.woff2) format("woff2"), url(../css/fonts/mkbritishwriting.ttf) format("ttf"), url(../css/fonts/mkbritishwriting-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "croissant_oneregular";
+  src: url(../css/fonts/croissantone-regular-webfont.woff2) format("woff2"), url(../css/fonts/croissantone-regular-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "alluraregular";
+  src: url(../css/fonts/allura-regular-webfont.woff2) format("woff2"), url(../css/fonts/allura-regular-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "josschriftregular";
+  src: url(../css/fonts/josschrift-webfont.woff2) format("woff2"), url(../css/fonts/josschrift-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "kaushan_scriptregular";
+  src: url(../css/fonts/kaushanscript-regular-webfont.woff2) format("woff2"), url(../css/fonts/kaushanscript-regular-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 @keyframes points {
   0% {
     opacity: 1;
@@ -42,8 +84,6 @@ body {
 }
 body h2 {
   font-size: 1.1em;
-  font-weight: lighter;
-  position: relative;
 }
 
 header {
@@ -52,6 +92,7 @@ header {
   text-align: center;
   line-height: 7vh;
   margin-bottom: 3vh;
+  font-family: "montserratextrabold";
 }
 header a {
   color: #fcca46;
@@ -66,13 +107,27 @@ main {
   row-gap: 3vh;
 }
 main a {
-  color: transparent;
+  color: inherit;
 }
 main a:hover {
   transform: scale(1.1);
   opacity: 0.5;
 }
+main .menu p {
+  margin-top: 0;
+  font-size: 34px;
+}
 
+.main__menu {
+  text-align: center;
+}
+.main__menu .prix {
+  font-weight: bold;
+}
+
+.page__menu {
+  line-height: 2.4em;
+}
 .page__menu h1 {
   text-align: center;
 }
@@ -92,6 +147,14 @@ main a:hover {
 .lien_menu a {
   color: inherit;
   text-decoration: none;
+}
+.lien_menu a i {
+  font-size: 1.2em;
+  color: transparent;
+  background: linear-gradient(to left, #f04e5f, #f6916a);
+  background-clip: text;
+  margin-bottom: 2px;
+  margin-right: 2px;
 }
 
 .la-note-enchantee {
@@ -174,12 +237,18 @@ main a:hover {
   margin-top: 0;
 }
 
+.la-note-enchantee, .page__la-note-enchantee {
+  background-color: #fcdfda;
+  font-family: "mkbritishwritingregular";
+}
 .la-note-enchantee h1, .page__la-note-enchantee h1 {
+  margin-top: 50px;
   color: #3d1319;
+  font-size: 28px;
 }
 .la-note-enchantee h1 i, .page__la-note-enchantee h1 i {
   display: block;
-  font-size: 2.5em;
+  font-size: 2em;
   color: transparent;
   background: linear-gradient(to left, #f04e5f, #f6916a);
   background-clip: text;
@@ -189,10 +258,29 @@ main a:hover {
   color: #3d1319;
 }
 .la-note-enchantee h2, .la-note-enchantee .prix, .page__la-note-enchantee h2, .page__la-note-enchantee .prix {
+  font-size: 20px;
+  color: #3d1319;
   font-weight: bold;
 }
+.la-note-enchantee .intitule, .page__la-note-enchantee .intitule {
+  display: flex;
+  justify-content: space-between;
+}
+.la-note-enchantee .intitule h2, .page__la-note-enchantee .intitule h2 {
+  flex-basis: 174.5px;
+}
+.la-note-enchantee .intitule img, .page__la-note-enchantee .intitule img {
+  width: 32%;
+  flex-shrink: 10;
+}
 
+.le-chic-a-la-française, .page__le-chic-a-la-française {
+  font-family: "croissant_oneregular";
+  text-align: center;
+}
 .le-chic-a-la-française h1, .page__le-chic-a-la-française h1 {
+  font-size: 17px;
+  margin-top: 70px;
   color: transparent;
   background: linear-gradient(160deg, #e38a12, #8f5aff);
   background-clip: text;
@@ -204,17 +292,42 @@ main a:hover {
 .le-chic-a-la-française .plats, .page__le-chic-a-la-française .plats {
   color: #a56799;
 }
-.le-chic-a-la-française .plats::before, .page__le-chic-a-la-française .plats::before {
-  background-color: blue;
-}
 .le-chic-a-la-française .desserts, .page__le-chic-a-la-française .desserts {
   color: #6e4ccc;
 }
 .le-chic-a-la-française p, .page__le-chic-a-la-française p {
   color: #c77412;
+  font-family: "croissant_oneregular";
+}
+.le-chic-a-la-française .l-c-f, .page__le-chic-a-la-française .l-c-f {
+  background-color: #fef5fd;
+  margin: 0 auto;
+  max-width: 576px;
+  padding: 0 10px 65px;
+  font-size: 12.5px;
+}
+.le-chic-a-la-française .intitule, .page__le-chic-a-la-française .intitule {
+  display: flex;
+  justify-content: space-between;
+}
+.le-chic-a-la-française .intitule h2, .page__le-chic-a-la-française .intitule h2 {
+  font-size: 15px;
+  flex-basis: 300px;
+}
+.le-chic-a-la-française .intitule img, .page__le-chic-a-la-française .intitule img {
+  width: 30%;
+  flex-shrink: 10;
+}
+.le-chic-a-la-française .intitule h2 + img, .page__le-chic-a-la-française .intitule h2 + img {
+  transform: scale(-1);
 }
 
 .le-délice-des-papilles h1, .page__le-délice-des-papilles h1 {
+  font-family: "alluraregular";
+  font-size: 1.75em;
+  padding-top: 8px;
+  margin-top: 70px;
+  margin-bottom: 8.5px;
   color: transparent;
   background: linear-gradient(to right, #0023db, #2495fb);
   background-clip: text;
@@ -222,9 +335,46 @@ main a:hover {
 }
 .le-délice-des-papilles p, .page__le-délice-des-papilles p {
   color: #0887fb;
+  font-family: "josschriftregular";
+}
+.le-délice-des-papilles .l-d-p, .page__le-délice-des-papilles .l-d-p {
+  text-align: center;
+  background-color: #f9f9f9;
+  margin: 0 auto;
+  max-width: 576px;
+  padding: 0 10px 65px;
+}
+.le-délice-des-papilles .l-d-p h1, .page__le-délice-des-papilles .l-d-p h1 {
+  font-size: 3.5em;
+}
+.le-délice-des-papilles .l-d-p article, .page__le-délice-des-papilles .l-d-p article {
+  font-family: "josschriftregular";
+  font-size: 15px;
+}
+.le-délice-des-papilles .intitule, .page__le-délice-des-papilles .intitule {
+  display: flex;
+  justify-content: space-between;
+}
+.le-délice-des-papilles .intitule h2, .page__le-délice-des-papilles .intitule h2 {
+  flex-basis: 207px;
+  flex-shrink: 0;
+}
+.le-délice-des-papilles .intitule img, .page__le-délice-des-papilles .intitule img {
+  width: 32%;
+  flex-shrink: 10;
+}
+.le-délice-des-papilles .intitule h2 + img, .page__le-délice-des-papilles .intitule h2 + img {
+  transform: scaleX(-1);
 }
 
 .la-palette-du-gout h1, .page__la-palette-du-gout h1 {
+  font-family: "kaushan_scriptregular";
+  font-weight: lighter;
+  font-size: 1.7em;
+  padding-top: 8px;
+  padding-bottom: 24px;
+  margin-top: 70px;
+  margin-bottom: 8.5px;
   color: transparent;
   background: linear-gradient(to right, #3e923a, #beff7f);
   background-clip: text;
@@ -232,43 +382,60 @@ main a:hover {
 }
 .la-palette-du-gout p, .page__la-palette-du-gout p {
   color: #72bf56;
+  font-family: "josschriftregular";
+}
+.la-palette-du-gout .l-p-d-g, .page__la-palette-du-gout .l-p-d-g {
+  text-align: center;
+  background-color: #fdfffd;
+  margin: 0 auto;
+  max-width: 576px;
+  padding: 0 10px 65px;
+}
+.la-palette-du-gout .l-p-d-g article, .page__la-palette-du-gout .l-p-d-g article {
+  font-family: "josschriftregular";
+  font-size: 15px;
+}
+.la-palette-du-gout .intitule, .page__la-palette-du-gout .intitule {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.la-palette-du-gout .intitule h2, .page__la-palette-du-gout .intitule h2 {
+  flex-basis: 153px;
+}
+.la-palette-du-gout .intitule img, .page__la-palette-du-gout .intitule img {
+  width: 32%;
+  flex-shrink: 10;
+}
+.la-palette-du-gout .intitule h2 + img, .page__la-palette-du-gout .intitule h2 + img {
+  transform: scale(-1);
 }
 
 #prochainement {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   width: 272px;
-  height: 46px;
+  height: 5vh;
   border-radius: 7px;
   background-color: #569c87;
   color: #fcca46;
   margin: 3vh auto;
-  text-align: center;
-  overflow: hidden;
-  line-height: 5vh;
 }
-#prochainement p {
-  margin: 0 0 0 10px;
+#prochainement .points {
+  animation-name: points;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
-#prochainement p::after {
-  content: "";
-  margin-left: 10px;
+#prochainement .points .point {
   display: inline-block;
   background-color: #fcca46;
   border-radius: 50px;
   width: 7px;
   height: 7px;
   border: 1px solid #fcca46;
-  opacity: 0;
-}
-#prochainement:hover p {
-  translate: -14%;
-}
-#prochainement:hover p::after {
-  animation-name: points;
-  animation-duration: 1000ms;
-  animation-delay: 500ms;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-fill-mode: both;
+  opacity: 1;
 }
 
 footer {
@@ -282,6 +449,7 @@ footer {
   line-height: 3.5vh;
   background-color: #569c87;
   color: #fcca46;
+  font-family: "montserratsemibold";
 }
 footer a {
   margin: 0 5vw;
@@ -294,203 +462,17 @@ footer .footer__btn:hover {
   animation-iteration-count: infinite;
 }
 
-@media screen and (min-width: 349px) {
-  .l-n-e h2::before {
-    content: "";
-    display: inline-block;
-    width: 20vw;
-    height: 1vh;
-    background-size: 20vw 1vh;
-    background-image: url("../css/svg/Menu1-ligneG.svg");
-    margin-right: 5vw;
-  }
-
-  .l-n-e h2::after {
-    content: "";
-    display: inline-block;
-    width: 20vw;
-    height: 1vh;
-    background-size: 20vw 1vh;
-    background-image: url("../css/svg/Menu1-ligneD.svg");
-  }
-
-  .l-d-p h2::before {
-    content: "";
-    display: inline-block;
-    width: 20vw;
-    height: 1vh;
-    background-size: 20vw 1vh;
-    background-image: url("../css/svg/Menu3-ligne.svg");
-    margin-right: 5vw;
-    position: absolute;
-    left: 0;
-    top: 25%;
-  }
-
-  .l-d-p h2::after {
-    content: "";
-    display: inline-block;
-    width: 20vw;
-    height: 1vh;
-    background-size: 20vw 1vh;
-    background-image: url("../css/svg/Menu3-ligne.svg");
-    transform: scaleX(-1);
-    margin-left: 5vw;
-    position: absolute;
-    right: 0;
-    top: 25%;
-  }
-
-  .l-p-d-g h2::before {
-    content: "";
-    display: inline-block;
-    width: 20vw;
-    height: 1vh;
-    background-size: 20vw 1vh;
-    background-image: url("../css/svg/Menu4-ligne.svg");
-    margin-right: 5vw;
-    position: absolute;
-    left: 0;
-    top: 25%;
-  }
-
-  .l-p-d-g h2::after {
-    content: "";
-    display: inline-block;
-    width: 20vw;
-    height: 1vh;
-    background-size: 20vw 1vh;
-    background-image: url("../css/svg/Menu4-ligne.svg");
-    transform: scaleX(-1);
-    margin-left: 5vw;
-    position: absolute;
-    right: 0;
-    top: 25%;
-  }
-}
-@media screen and (min-width: 450px) {
-  .l-c-f .entrees h2::after {
-    content: "";
-    display: inline-block;
-    width: 20vw;
-    height: 1vh;
-    background-size: 20vw 1vh;
-    background-image: url("../css/svg/Menu2-ligne.svg");
-    margin-right: 5vw;
-    position: absolute;
-    right: -7vw;
-    top: 25%;
-  }
-
-  .l-c-f .entrees h2::before {
-    content: "";
-    display: inline-block;
-    width: 20vw;
-    height: 1vh;
-    background-size: 20vw 1vh;
-    background-image: url("../css/svg/Menu2-ligne.svg");
-    transform: rotate(180deg);
-    margin-left: 5vw;
-    position: absolute;
-    left: -7vw;
-    top: 25%;
-  }
-
-  .l-c-f .plats h2::after {
-    content: "";
-    display: inline-block;
-    width: 20vw;
-    height: 1vh;
-    background-size: 20vw 1vh;
-    background-image: url("../css/svg/Menu2-ligne-plat.svg");
-    margin-right: 5vw;
-    position: absolute;
-    right: -7vw;
-    top: 25%;
-  }
-
-  .l-c-f .plats h2::before {
-    content: "";
-    display: inline-block;
-    width: 20vw;
-    height: 1vh;
-    background-size: 20vw 1vh;
-    background-image: url("../css/svg/Menu2-ligne-plat.svg");
-    transform: rotate(180deg);
-    margin-left: 5vw;
-    position: absolute;
-    left: -7vw;
-    top: 25%;
-  }
-
-  .l-c-f .desserts h2::after {
-    content: "";
-    display: inline-block;
-    width: 20vw;
-    height: 1vh;
-    background-size: 20vw 1vh;
-    background-image: url("../css/svg/Menu2-ligne-dessert.svg");
-    margin-right: 5vw;
-    position: absolute;
-    right: -7vw;
-    top: 25%;
-  }
-
-  .l-c-f .desserts h2::before {
-    content: "";
-    display: inline-block;
-    width: 20vw;
-    height: 1vh;
-    background-size: 20vw 1vh;
-    background-image: url("../css/svg/Menu2-ligne-dessert.svg");
-    transform: rotate(180deg);
-    margin-left: 5vw;
-    position: absolute;
-    left: -7vw;
-    top: 25%;
-  }
-}
-@media screen and (max-width: 576px) {
-  .main__menu {
-    margin: 0 17px;
-  }
-
-  h2 {
-    text-align: center;
-  }
-
-  .repas__prix {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-}
-@media screen and (min-width: 577px) {
-  .main__menu {
-    margin: 0 auto;
-    max-width: 600px;
-  }
-
-  article h2 {
-    text-align: center;
-  }
-
-  .repas__prix {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .lien_menu {
-    text-align: center;
-  }
-  .lien_menu a {
-    text-decoration: none;
-    color: #3d1319;
-  }
-}
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) {
   body {
-    margin-bottom: 9vh;
+    margin-bottom: 64px;
+    background-color: white;
+  }
+
+  .main__index {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 35px;
+    max-width: 576px;
+    margin: auto;
   }
 
   header {
@@ -499,11 +481,79 @@ footer .footer__btn:hover {
     margin-bottom: 35px;
   }
 
-  .main__index {
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 35px;
-    max-width: 579px;
-    margin: auto;
+  .page__menu {
+    background-color: white;
+  }
+
+  .main__menu {
+    margin: 0 17px;
+  }
+
+  article h2 {
+    text-align: center;
+  }
+
+  .repas__prix {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  .lien_menu {
+    text-align: center;
+  }
+  .lien_menu a {
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #3d1319;
+  }
+
+  .l-n-e {
+    background-color: #fcdfda;
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 0 60px;
+  }
+
+  .l-c-f {
+    padding-bottom: 65px;
+  }
+  .l-c-f h1 {
+    font-size: 2.5em;
+  }
+  .l-c-f article {
+    display: flex;
+    flex-direction: column;
+  }
+  .l-c-f .repas__prix {
+    width: 466px;
+    align-self: center;
+  }
+
+  .l-d-p {
+    padding-bottom: 65px;
+  }
+  .l-d-p article {
+    display: flex;
+    flex-direction: column;
+  }
+  .l-d-p .repas__prix {
+    width: 452px;
+    align-self: center;
+  }
+
+  .l-p-d-g h1 {
+    font-size: 3.5em;
+  }
+  .l-p-d-g article {
+    display: flex;
+    flex-direction: column;
+  }
+  .l-p-d-g .repas__prix {
+    width: 477px;
+    align-self: center;
   }
 
   footer {
@@ -511,163 +561,140 @@ footer .footer__btn:hover {
     line-height: 5.5vh;
   }
 }
-@media screen and (min-width: 992px) {
-  .main__index {
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 35px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .main__index {
-    max-width: 968px;
-  }
-}
-.page__la-note-enchantee {
-  background-color: #fcdfda;
-}
-
-.page__le-chic-a-la-française {
-  background-color: #fef5fd;
-}
-
-.page__le-délice-des-papilles {
-  background-color: #f9f9f9;
-}
-
-.page__la-palette-du-gout {
-  background-color: #fdfffd;
-}
-
 .l-n-e .entrees h2 {
   padding-bottom: 3px;
   background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
   background-size: 0 100%;
-  background-position: bottom;
+  background-position: left;
   transition: background-size 1500ms;
 }
 .l-n-e .entrees h2:hover {
-  background-size: 80px 100%;
+  background-size: 100% 100%;
 }
 
 .l-n-e .plats h2 {
   padding-bottom: 3px;
   background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
   background-size: 0 100%;
-  background-position: bottom;
+  background-position: left;
   transition: background-size 1500ms;
 }
 .l-n-e .plats h2:hover {
-  background-size: 140px 100%;
+  background-size: 100% 100%;
 }
 
 .l-n-e .desserts h2 {
   padding-bottom: 3px;
   background: linear-gradient(to top, #3d1319 0%, #3d1319 3px, transparent 1px) no-repeat;
   background-size: 0 100%;
-  background-position: bottom;
+  background-position: left;
   transition: background-size 1500ms;
 }
 .l-n-e .desserts h2:hover {
-  background-size: 82px 100%;
+  background-size: 100% 100%;
 }
 
 .l-c-f .entrees h2 {
   padding-bottom: 3px;
   background: linear-gradient(to top, #c67412 0%, #c67412 3px, transparent 1px) no-repeat;
   background-size: 0 100%;
-  background-position: bottom;
+  background-position: left;
   transition: background-size 1500ms;
 }
 .l-c-f .entrees h2:hover {
-  background-size: 260px 100%;
+  background-size: 100% 100%;
 }
 
 .l-c-f .plats h2 {
   padding-bottom: 3px;
   background: linear-gradient(to top, #a56799 0%, #a56799 3px, transparent 1px) no-repeat;
   background-size: 0 100%;
-  background-position: bottom;
+  background-position: left;
   transition: background-size 1500ms;
 }
 .l-c-f .plats h2:hover {
-  background-size: 191px 100%;
+  background-size: 100% 100%;
 }
 
 .l-c-f .desserts h2 {
   padding-bottom: 3px;
   background: linear-gradient(to top, #6e4ccc 0%, #6e4ccc 3px, transparent 1px) no-repeat;
   background-size: 0 100%;
-  background-position: bottom;
+  background-position: left;
   transition: background-size 1500ms;
 }
 .l-c-f .desserts h2:hover {
-  background-size: 230px 100%;
+  background-size: 100% 100%;
 }
 
 .l-d-p .entrees h2 {
   padding-bottom: 3px;
   background: linear-gradient(to top, #0228dd 0%, #0228dd 3px, transparent 1px) no-repeat;
   background-size: 0 100%;
-  background-position: bottom;
+  background-position: left;
   transition: background-size 1500ms;
 }
 .l-d-p .entrees h2:hover {
-  background-size: 226px 100%;
+  background-size: 100% 100%;
 }
 
 .l-d-p .plats h2 {
   padding-bottom: 3px;
   background: linear-gradient(to top, #0670f3 0%, #0670f3 3px, transparent 1px) no-repeat;
   background-size: 0 100%;
-  background-position: bottom;
+  background-position: left;
   transition: background-size 1500ms;
 }
 .l-d-p .plats h2:hover {
-  background-size: 206px 100%;
+  background-size: 100% 100%;
 }
 
 .l-d-p .desserts h2 {
   padding-bottom: 3px;
   background: linear-gradient(to top, #229df9 0%, #229df9 3px, transparent 1px) no-repeat;
   background-size: 0 100%;
-  background-position: bottom;
+  background-position: left;
   transition: background-size 1500ms;
 }
 .l-d-p .desserts h2:hover {
-  background-size: 200px 100%;
+  background-size: 100% 100%;
 }
 
 .l-p-d-g .entrees h2 {
   padding-bottom: 3px;
   background: linear-gradient(to top, #41963c 0%, #41963c 3px, transparent 1px) no-repeat;
   background-size: 0 100%;
-  background-position: bottom;
+  background-position: left;
   transition: background-size 1500ms;
 }
 .l-p-d-g .entrees h2:hover {
-  background-size: 89px 100%;
+  background-size: 100% 100%;
 }
 
 .l-p-d-g .plats h2 {
   padding-bottom: 3px;
   background: linear-gradient(to top, #75c158 0%, #75c158 3px, transparent 1px) no-repeat;
   background-size: 0 100%;
-  background-position: bottom;
+  background-position: left;
   transition: background-size 1500ms;
 }
 .l-p-d-g .plats h2:hover {
-  background-size: 180px 100%;
+  background-size: 100% 100%;
 }
 
 .l-p-d-g .desserts h2 {
   padding-bottom: 3px;
   background: linear-gradient(to top, #b0f377 0%, #b0f377 3px, transparent 1px) no-repeat;
   background-size: 0 100%;
-  background-position: bottom;
+  background-position: left;
   transition: background-size 1500ms;
 }
 .l-p-d-g .desserts h2:hover {
-  background-size: 197px 100%;
+  background-size: 100% 100%;
+}
+
+.main__menu {
+  border: solid 1px black;
 }
 
 /*# sourceMappingURL=style.css.map */
