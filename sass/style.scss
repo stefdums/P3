@@ -2,7 +2,7 @@
 
 body{
     box-sizing: border-box;
-    margin:0 0 0 0;
+    margin:0;
     padding:0;
     height:auto;
     font-size:16px;
@@ -11,6 +11,7 @@ body{
     }
 }
 header{
+    margin-bottom:3vh;
     background-color: $vert;   
     height:7vh;
     text-align:center;
@@ -46,6 +47,9 @@ main{
         font-size:34px;
     }
 }
+#page__index{
+    margin-bottom:50px;
+}
 .main__menu{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2 );
     text-align: center;
@@ -64,6 +68,7 @@ main{
             color:transparent;
             background: linear-gradient(to left, #f04e5f, #f6916a);
             background-clip: text;
+            -webkit-background-clip: text;
             margin-bottom:2px;
         }
     }
@@ -80,6 +85,7 @@ main{
             color:transparent;
             background: linear-gradient(to left, #f04e5f, #f6916a);
             background-clip: text;
+            -webkit-background-clip: text;
             margin-bottom:2px;
             margin-right:2px; 
         }
@@ -125,6 +131,7 @@ main{
             color:transparent;
             background: linear-gradient(to left, #f04e5f, #f6916a);
             background-clip: text;
+            -webkit-background-clip: text;
             margin-bottom:2px;
         }
     }
@@ -342,8 +349,8 @@ footer{
     right:0px;
     display:flex;
     justify-content:space-between;
-    height:3.5vh;
-    line-height:3.5vh;
+    height:30px;
+    line-height:30px;
     background-color:$vert;
     color:$jaune;
     font-family: 'montserratsemibold';
@@ -351,7 +358,6 @@ footer{
         margin: 0 5vw;
         text-decoration:none;
         color:$jaune;
-    
     }
     .footer__btn:hover{
         animation-name: wiggle;
