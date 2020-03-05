@@ -16,7 +16,7 @@ header{
     height:7vh;
     text-align:center;
     line-height: 7vh;
-    font-family: 'montserratextrabold';
+    font-family: 'montserratextrabold', sans-serif;
     a{
         color:$jaune;
         text-decoration:none;
@@ -51,7 +51,6 @@ main{
     margin-bottom:50px;
 }
 .main__menu{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2 );
     text-align: center;
     .prix{
         font-weight:bold;
@@ -65,11 +64,11 @@ main{
         i{  
             display:block;
             font-size: 2.5em;
-            color:transparent;
             background: linear-gradient(to left, #f04e5f, #f6916a);
             background-clip: text;
             -webkit-background-clip: text;
             margin-bottom:2px;
+            color:transparent;
         }
     }
 }
@@ -82,16 +81,15 @@ main{
         text-decoration: none;
         i{
             font-size:1.2em;
-            color:transparent;
             background: linear-gradient(to left, #f04e5f, #f6916a);
             background-clip: text;
             -webkit-background-clip: text;
+            color:transparent;
             margin-bottom:2px;
             margin-right:2px; 
         }
     }
 }
-
 
 @each $background in $backgrounds {
     .#{nth($background, 1)} {
@@ -119,7 +117,7 @@ main{
     
 .la-note-enchantee, .page__la-note-enchantee{
     background-color:$fond-1;
-    font-family: 'mkbritishwritingregular';
+    font-family: 'mkbritishwritingregular', sans-serif;
         
     h1{
         margin-top:50px;
@@ -128,12 +126,16 @@ main{
         i{  
             display:block;
             font-size: 2em;
-            color:transparent;
             background: linear-gradient(to left, #f04e5f, #f6916a);
             background-clip: text;
             -webkit-background-clip: text;
+            color:transparent;
             margin-bottom:2px;
         }
+    }
+
+    .l-n-e article{
+        margin: 0 10px;
     }
 
     p{
@@ -161,19 +163,16 @@ main{
 }
 
 .le-chic-a-la-française, .page__le-chic-a-la-française{
-    font-family:'croissant_oneregular' ;
+    font-family:'croissant_oneregular', sans-serif;
     text-align:center;
     
     h1{
         font-size:17px;
-        margin-top:70px;
-        color:transparent;
+        margin-top:70px;        
         background: linear-gradient(160deg,#e38a12, #8f5aff );
         background-clip:text;
         -webkit-background-clip: text;
-    }
-    h2{
-
+        color:transparent;
     }
     .entrees{
         color:$entrée2;
@@ -186,7 +185,7 @@ main{
     }
     p{
         color:#c77412;
-        font-family:'croissant_oneregular';
+        font-family:'croissant_oneregular', sans-serif;
     }
     .l-c-f{
         
@@ -217,19 +216,19 @@ main{
 .le-délice-des-papilles, .page__le-délice-des-papilles{
     h1{
         
-        font-family:"alluraregular";
+        font-family:"alluraregular", sans-serif;
         font-size:1.75em;
         padding-top:8px;
         margin-top:70px;
-        margin-bottom:8.5px;
-        color:transparent;
+        margin-bottom:8.5px;        
         background: linear-gradient(to right, #0023db, #2495fb );
         background-clip:text;
         -webkit-background-clip: text;
+        color:transparent;
     } 
     p{
         color:#0887fb;
-        font-family: "josschriftregular";
+        font-family: "josschriftregular", sans-serif;
 
     } 
     .l-d-p{
@@ -240,10 +239,10 @@ main{
         max-width:576px;
         padding:0 10px 65px;
         h1{
-            font-size:3.5em;
+            font-size:2.5em;
         }
         article{
-            font-family: "josschriftregular";
+            font-family: "josschriftregular", sans-serif;
             font-size: 15px;
         }
     }
@@ -267,22 +266,21 @@ main{
 
 .la-palette-du-gout, .page__la-palette-du-gout{
     h1{
-        font-family:'kaushan_scriptregular';
+        font-family:'kaushan_scriptregular', sans-serif;
         font-weight:lighter;
         font-size:1.7em;
         padding-top:8px;
         padding-bottom:24px;
         margin-top:70px;
         margin-bottom:8.5px;
-        color:transparent;
         background: linear-gradient(to right, #3e923a, #beff7f );
         background-clip:text;
         -webkit-background-clip: text;
-        
+        color:transparent;
     } 
     p{
         color:#72bf56;
-        font-family: "josschriftregular";
+        font-family: "josschriftregular", sans-serif;
     }
     .l-p-d-g{
         text-align: center;;
@@ -291,7 +289,7 @@ main{
         max-width:576px;
         padding:0 10px 65px;
         article{
-            font-family:'josschriftregular';
+            font-family:'josschriftregular', sans-serif;
             font-size:15px;
         }
     }        
@@ -334,9 +332,8 @@ main{
             display: inline-block;
             background-color: $jaune;
             border-radius:50px;
-            width:7px;
-            height:7px;
-            border:1px solid $jaune;
+            width:9px;
+            height:9px;
             opacity: 1;
         }
     }   
@@ -353,7 +350,7 @@ footer{
     line-height:30px;
     background-color:$vert;
     color:$jaune;
-    font-family: 'montserratsemibold';
+    font-family: 'montserratsemibold', sans-serif;
     a{
         margin: 0 5vw;
         text-decoration:none;
@@ -361,8 +358,11 @@ footer{
     }
     .footer__btn:hover{
         animation-name: wiggle;
+        -webkit-animation-name: wiggle;
         animation-duration: 550ms;
+        -webkit-animation-duration: 550ms;
         animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
         }
     }    
 
@@ -394,6 +394,7 @@ footer{
 
     }
     .main__menu{
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2 );
         margin:0 17px;
         
     }
@@ -443,6 +444,9 @@ footer{
     }
     .l-d-p{
         padding-bottom:65px;
+        h1{
+            font-size: 3.5em !important;
+        }
         article{
             display:flex;
             flex-direction: column;

@@ -60,19 +60,24 @@
 }
 @keyframes wiggle {
   0% {
-    translate: 0px;
+    transform: translate(0px);
+    -webkit-transform: translate(0px);
   }
   25% {
-    translate: 10px;
+    transform: translate(10px);
+    -webkit-transform: translate(10px);
   }
   50% {
-    translate: 0px;
+    transform: translate(0px);
+    -webkit-transform: translate(0px);
   }
   75% {
-    translate: -10px;
+    transform: translate(-10px);
+    -webkit-transform: translate(-10px);
   }
   100% {
-    translate: 0px;
+    transform: translate(0px);
+    -webkit-transform: translate(0px);
   }
 }
 body {
@@ -92,7 +97,7 @@ header {
   height: 7vh;
   text-align: center;
   line-height: 7vh;
-  font-family: "montserratextrabold";
+  font-family: "montserratextrabold", sans-serif;
 }
 header a {
   color: #fcca46;
@@ -131,7 +136,6 @@ main .menu p {
 }
 
 .main__menu {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 .main__menu .prix {
@@ -147,11 +151,11 @@ main .menu p {
 .page__menu h1 i {
   display: block;
   font-size: 2.5em;
-  color: transparent;
   background: linear-gradient(to left, #f04e5f, #f6916a);
   background-clip: text;
   -webkit-background-clip: text;
   margin-bottom: 2px;
+  color: transparent;
 }
 
 .lien_menu {
@@ -164,10 +168,10 @@ main .menu p {
 }
 .lien_menu a i {
   font-size: 1.2em;
-  color: transparent;
   background: linear-gradient(to left, #f04e5f, #f6916a);
   background-clip: text;
   -webkit-background-clip: text;
+  color: transparent;
   margin-bottom: 2px;
   margin-right: 2px;
 }
@@ -254,7 +258,7 @@ main .menu p {
 
 .la-note-enchantee, .page__la-note-enchantee {
   background-color: #fcdfda;
-  font-family: "mkbritishwritingregular";
+  font-family: "mkbritishwritingregular", sans-serif;
 }
 .la-note-enchantee h1, .page__la-note-enchantee h1 {
   margin-top: 50px;
@@ -264,11 +268,14 @@ main .menu p {
 .la-note-enchantee h1 i, .page__la-note-enchantee h1 i {
   display: block;
   font-size: 2em;
-  color: transparent;
   background: linear-gradient(to left, #f04e5f, #f6916a);
   background-clip: text;
   -webkit-background-clip: text;
+  color: transparent;
   margin-bottom: 2px;
+}
+.la-note-enchantee .l-n-e article, .page__la-note-enchantee .l-n-e article {
+  margin: 0 10px;
 }
 .la-note-enchantee p, .page__la-note-enchantee p {
   color: #3d1319;
@@ -291,16 +298,16 @@ main .menu p {
 }
 
 .le-chic-a-la-française, .page__le-chic-a-la-française {
-  font-family: "croissant_oneregular";
+  font-family: "croissant_oneregular", sans-serif;
   text-align: center;
 }
 .le-chic-a-la-française h1, .page__le-chic-a-la-française h1 {
   font-size: 17px;
   margin-top: 70px;
-  color: transparent;
   background: linear-gradient(160deg, #e38a12, #8f5aff);
   background-clip: text;
   -webkit-background-clip: text;
+  color: transparent;
 }
 .le-chic-a-la-française .entrees, .page__le-chic-a-la-française .entrees {
   color: #c67412;
@@ -313,7 +320,7 @@ main .menu p {
 }
 .le-chic-a-la-française p, .page__le-chic-a-la-française p {
   color: #c77412;
-  font-family: "croissant_oneregular";
+  font-family: "croissant_oneregular", sans-serif;
 }
 .le-chic-a-la-française .l-c-f, .page__le-chic-a-la-française .l-c-f {
   background-color: #fef5fd;
@@ -339,19 +346,19 @@ main .menu p {
 }
 
 .le-délice-des-papilles h1, .page__le-délice-des-papilles h1 {
-  font-family: "alluraregular";
+  font-family: "alluraregular", sans-serif;
   font-size: 1.75em;
   padding-top: 8px;
   margin-top: 70px;
   margin-bottom: 8.5px;
-  color: transparent;
   background: linear-gradient(to right, #0023db, #2495fb);
   background-clip: text;
   -webkit-background-clip: text;
+  color: transparent;
 }
 .le-délice-des-papilles p, .page__le-délice-des-papilles p {
   color: #0887fb;
-  font-family: "josschriftregular";
+  font-family: "josschriftregular", sans-serif;
 }
 .le-délice-des-papilles .l-d-p, .page__le-délice-des-papilles .l-d-p {
   text-align: center;
@@ -361,10 +368,10 @@ main .menu p {
   padding: 0 10px 65px;
 }
 .le-délice-des-papilles .l-d-p h1, .page__le-délice-des-papilles .l-d-p h1 {
-  font-size: 3.5em;
+  font-size: 2.5em;
 }
 .le-délice-des-papilles .l-d-p article, .page__le-délice-des-papilles .l-d-p article {
-  font-family: "josschriftregular";
+  font-family: "josschriftregular", sans-serif;
   font-size: 15px;
 }
 .le-délice-des-papilles .intitule, .page__le-délice-des-papilles .intitule {
@@ -384,21 +391,21 @@ main .menu p {
 }
 
 .la-palette-du-gout h1, .page__la-palette-du-gout h1 {
-  font-family: "kaushan_scriptregular";
+  font-family: "kaushan_scriptregular", sans-serif;
   font-weight: lighter;
   font-size: 1.7em;
   padding-top: 8px;
   padding-bottom: 24px;
   margin-top: 70px;
   margin-bottom: 8.5px;
-  color: transparent;
   background: linear-gradient(to right, #3e923a, #beff7f);
   background-clip: text;
   -webkit-background-clip: text;
+  color: transparent;
 }
 .la-palette-du-gout p, .page__la-palette-du-gout p {
   color: #72bf56;
-  font-family: "josschriftregular";
+  font-family: "josschriftregular", sans-serif;
 }
 .la-palette-du-gout .l-p-d-g, .page__la-palette-du-gout .l-p-d-g {
   text-align: center;
@@ -408,7 +415,7 @@ main .menu p {
   padding: 0 10px 65px;
 }
 .la-palette-du-gout .l-p-d-g article, .page__la-palette-du-gout .l-p-d-g article {
-  font-family: "josschriftregular";
+  font-family: "josschriftregular", sans-serif;
   font-size: 15px;
 }
 .la-palette-du-gout .intitule, .page__la-palette-du-gout .intitule {
@@ -448,9 +455,8 @@ main .menu p {
   display: inline-block;
   background-color: #fcca46;
   border-radius: 50px;
-  width: 7px;
-  height: 7px;
-  border: 1px solid #fcca46;
+  width: 9px;
+  height: 9px;
   opacity: 1;
 }
 
@@ -465,7 +471,7 @@ footer {
   line-height: 30px;
   background-color: #569c87;
   color: #fcca46;
-  font-family: "montserratsemibold";
+  font-family: "montserratsemibold", sans-serif;
 }
 footer a {
   margin: 0 5vw;
@@ -474,8 +480,11 @@ footer a {
 }
 footer .footer__btn:hover {
   animation-name: wiggle;
+  -webkit-animation-name: wiggle;
   animation-duration: 550ms;
+  -webkit-animation-duration: 550ms;
   animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
 }
 
 @media screen and (max-width: 575px) {
@@ -507,6 +516,7 @@ footer .footer__btn:hover {
   }
 
   .main__menu {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin: 0 17px;
   }
 
@@ -555,6 +565,9 @@ footer .footer__btn:hover {
 
   .l-d-p {
     padding-bottom: 65px;
+  }
+  .l-d-p h1 {
+    font-size: 3.5em !important;
   }
   .l-d-p article {
     display: flex;
