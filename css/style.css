@@ -152,7 +152,6 @@ main .menu p {
   display: block;
   font-size: 2.5em;
   background: linear-gradient(to left, #f04e5f, #f6916a);
-  background-clip: text;
   -webkit-background-clip: text;
   margin-bottom: 2px;
   color: transparent;
@@ -169,7 +168,6 @@ main .menu p {
 .lien_menu a i {
   font-size: 1.2em;
   background: linear-gradient(to left, #f04e5f, #f6916a);
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   margin-bottom: 2px;
@@ -269,7 +267,6 @@ main .menu p {
   display: block;
   font-size: 2em;
   background: linear-gradient(to left, #f04e5f, #f6916a);
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   margin-bottom: 2px;
@@ -288,13 +285,14 @@ main .menu p {
 .la-note-enchantee .intitule, .page__la-note-enchantee .intitule {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .la-note-enchantee .intitule h2, .page__la-note-enchantee .intitule h2 {
-  flex-basis: 174.5px;
+  flex-shrink: 0;
 }
 .la-note-enchantee .intitule img, .page__la-note-enchantee .intitule img {
   width: 32%;
-  flex-shrink: 10;
+  flex-shrink: 100;
 }
 
 .le-chic-a-la-française, .page__le-chic-a-la-française {
@@ -305,7 +303,6 @@ main .menu p {
   font-size: 17px;
   margin-top: 70px;
   background: linear-gradient(160deg, #e38a12, #8f5aff);
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -332,14 +329,15 @@ main .menu p {
 .le-chic-a-la-française .intitule, .page__le-chic-a-la-française .intitule {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .le-chic-a-la-française .intitule h2, .page__le-chic-a-la-française .intitule h2 {
   font-size: 15px;
-  flex-basis: 300px;
+  flex-shrink: 0;
 }
 .le-chic-a-la-française .intitule img, .page__le-chic-a-la-française .intitule img {
   width: 30%;
-  flex-shrink: 10;
+  flex-shrink: 100;
 }
 .le-chic-a-la-française .intitule h2 + img, .page__le-chic-a-la-française .intitule h2 + img {
   transform: scale(-1);
@@ -352,7 +350,6 @@ main .menu p {
   margin-top: 70px;
   margin-bottom: 8.5px;
   background: linear-gradient(to right, #0023db, #2495fb);
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -377,9 +374,9 @@ main .menu p {
 .le-délice-des-papilles .intitule, .page__le-délice-des-papilles .intitule {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .le-délice-des-papilles .intitule h2, .page__le-délice-des-papilles .intitule h2 {
-  flex-basis: 207px;
   flex-shrink: 0;
 }
 .le-délice-des-papilles .intitule img, .page__le-délice-des-papilles .intitule img {
@@ -399,7 +396,6 @@ main .menu p {
   margin-top: 70px;
   margin-bottom: 8.5px;
   background: linear-gradient(to right, #3e923a, #beff7f);
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -422,11 +418,13 @@ main .menu p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 .la-palette-du-gout .intitule h2, .page__la-palette-du-gout .intitule h2 {
-  flex-basis: 153px;
+  flex-shrink: 0;
 }
 .la-palette-du-gout .intitule img, .page__la-palette-du-gout .intitule img {
+  height: auto;
   width: 32%;
   flex-shrink: 10;
 }

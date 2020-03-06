@@ -65,7 +65,6 @@ main{
             display:block;
             font-size: 2.5em;
             background: linear-gradient(to left, #f04e5f, #f6916a);
-            background-clip: text;
             -webkit-background-clip: text;
             margin-bottom:2px;
             color:transparent;
@@ -82,7 +81,6 @@ main{
         i{
             font-size:1.2em;
             background: linear-gradient(to left, #f04e5f, #f6916a);
-            background-clip: text;
             -webkit-background-clip: text;
             color:transparent;
             margin-bottom:2px;
@@ -127,7 +125,6 @@ main{
             display:block;
             font-size: 2em;
             background: linear-gradient(to left, #f04e5f, #f6916a);
-            background-clip: text;
             -webkit-background-clip: text;
             color:transparent;
             margin-bottom:2px;
@@ -151,12 +148,13 @@ main{
     .intitule{
         display:flex;
         justify-content: space-between;
+        align-items: center;
         h2{
-            flex-basis:174.5px;
+            flex-shrink: 0;
         }
         img{
-            width:32%;
-            flex-shrink: 10;
+            width: 32%;
+            flex-shrink: 100;
         
         }
     } 
@@ -170,7 +168,6 @@ main{
         font-size:17px;
         margin-top:70px;        
         background: linear-gradient(160deg,#e38a12, #8f5aff );
-        background-clip:text;
         -webkit-background-clip: text;
         color:transparent;
     }
@@ -198,14 +195,15 @@ main{
     } 
     .intitule{
         display:flex;
-        justify-content: space-between;  
+        justify-content: space-between;
+        align-items: center;  
         h2{
             font-size:15px;
-            flex-basis:300px;
+            flex-shrink:0;
         } 
         img{
             width:30%;   
-            flex-shrink: 10;     
+            flex-shrink: 100;     
         }
         h2 + img{
             transform: scale(-1);
@@ -222,7 +220,6 @@ main{
         margin-top:70px;
         margin-bottom:8.5px;        
         background: linear-gradient(to right, #0023db, #2495fb );
-        background-clip:text;
         -webkit-background-clip: text;
         color:transparent;
     } 
@@ -250,9 +247,9 @@ main{
     .intitule{
         display:flex;
         justify-content: space-between;
+        align-items: center;
         h2{
-            flex-basis:207px;
-            flex-shrink: 0;
+            flex-shrink:0;
         }
         img{
             width:32%;
@@ -274,7 +271,6 @@ main{
         margin-top:70px;
         margin-bottom:8.5px;
         background: linear-gradient(to right, #3e923a, #beff7f );
-        background-clip:text;
         -webkit-background-clip: text;
         color:transparent;
     } 
@@ -297,10 +293,12 @@ main{
         display:flex;
         flex-direction: row;
         justify-content:space-between;
+        align-items: center;
         h2{
-            flex-basis:153px;
+            flex-shrink: 0;
         }
         img{
+            height:auto;
             width:32%;   
             flex-shrink: 10;     
         }
@@ -380,7 +378,7 @@ footer{
     .main__index{
         grid-template-columns:1fr 1fr;
         grid-gap: 35px;
-        max-width:576px;//calc($width*+35);
+        max-width:576px;
         margin:auto;
     }
 
