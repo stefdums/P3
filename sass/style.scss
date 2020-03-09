@@ -115,7 +115,7 @@ main{
     
 .la-note-enchantee, .page__la-note-enchantee{
     background-color:$fond-1;
-    font-family: 'mkbritishwritingregular', sans-serif;
+    font-family: 'segoe-print','typo_comics_demoregular', sans-serif;
         
     h1{
         margin-top:50px;
@@ -161,12 +161,12 @@ main{
 }
 
 .le-chic-a-la-française, .page__le-chic-a-la-française{
+    background-color:$fond-2;
     font-family:'croissant_oneregular', sans-serif;
-    text-align:center;
-    
+    text-align:center; 
     h1{
-        font-size:17px;
-        margin-top:70px;        
+        font-size:20px;
+        margin-top:50px;        
         background: linear-gradient(160deg,#e38a12, #8f5aff );
         -webkit-background-clip: text;
         color:transparent;
@@ -184,8 +184,7 @@ main{
         color:#c77412;
         font-family:'croissant_oneregular', sans-serif;
     }
-    .l-c-f{
-        
+    .l-c-f{        
         background-color:$fond-2;
         margin:0 auto;
         max-width:576px;
@@ -203,7 +202,7 @@ main{
         } 
         img{
             width:30%;   
-            flex-shrink: 100;     
+            flex-shrink: 10;     
         }
         h2 + img{
             transform: scale(-1);
@@ -212,12 +211,13 @@ main{
 }
 
 .le-délice-des-papilles, .page__le-délice-des-papilles{
+    background-color:$fond-3;
     h1{
         
         font-family:"alluraregular", sans-serif;
         font-size:1.75em;
         padding-top:8px;
-        margin-top:70px;
+        margin-top:46px;
         margin-bottom:8.5px;        
         background: linear-gradient(to right, #0023db, #2495fb );
         -webkit-background-clip: text;
@@ -252,7 +252,7 @@ main{
             flex-shrink:0;
         }
         img{
-            width:32%;
+            width:25%;
             flex-shrink: 10;
         }
         h2 + img{
@@ -262,6 +262,7 @@ main{
 }
 
 .la-palette-du-gout, .page__la-palette-du-gout{
+    background-color:$fond-4;
     h1{
         font-family:'kaushan_scriptregular', sans-serif;
         font-weight:lighter;
@@ -299,7 +300,7 @@ main{
         }
         img{
             height:auto;
-            width:32%;   
+            width:30%;   
             flex-shrink: 10;     
         }
         h2 + img{
@@ -432,13 +433,17 @@ footer{
         article{
             display:flex;
             flex-direction: column;
-            
+            .intitule{
+                img{
+                    //width:30%;
+                }
+            }
         }
 
         .repas__prix{    
             width:466px;
             align-self: center;   
-        }  
+        }     
     }
     .l-d-p{
         padding-bottom:65px;

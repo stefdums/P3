@@ -14,14 +14,6 @@
       font-style: normal;
   
   }
-  @font-face {
-      font-family: 'mkbritishwritingregular';
-      src: url(../css/fonts/mkbritishwriting-webfont.woff2) format('woff2'),
-           url(../css/fonts/mkbritishwriting.ttf) format('ttf'),
-           url(../css/fonts/mkbritishwriting-webfont.woff) format('woff');
-      font-weight: normal;
-      font-style: normal;
-}
 @font-face {
       font-family: 'croissant_oneregular';
       src: url(../css/fonts/croissantone-regular-webfont.woff2) format('woff2'),
@@ -51,11 +43,30 @@ font-style: normal;
       font-weight: normal;
       font-style: normal;
 
+}
+@font-face {
+      font-family: 'typo_comics_bold_demoregular';
+      src: url(../css/typo_comics_bold_demo-webfont.woff2) format('woff2'),
+           url(../css/fonts/typo_comics_bold_demo-webfont.woff) format('woff');
+      font-weight: normal;
+      font-style: normal;  
+  }  
+@font-face {
+font-family: 'typo_comics_demoregular';
+src: url(../css/fonts/typo_comics_demo-webfont.woff2) format('woff2'),
+      url(../css/fonts/typo_comics_demo-webfont.woff) format('woff');
+font-weight: normal;
+font-style: normal;
 }  
-//variables couleurs
+@font-face {
+font-family: 'typo_comics_light_demoregular';
+src: url(../css/fonts/typo_comics_light_demo-webfont.woff2) format('woff2'),
+      url(../css/fonts/typo_comics_light_demo-webfont.woff) format('woff');
+font-weight: normal;
+font-style: normal;
+  } 
 
-$vert:rgb(86,156,135);
-$jaune:rgb(252,202,70);
+//variables couleurs fond
 $fond-1:rgb(252,223,218);
 $fond-2:rgb(254,245,253);
 $fond-3:rgb(249,249,249);
@@ -64,6 +75,8 @@ $fond-4:rgb(253,255,253);
 //menu1
 $color1:#3d1319;
 //menu2
+$vert:rgb(86,156,135);
+$jaune:rgb(252,202,70);
 $entrée2:#c67412;
 $plat2:#a56799;
 $dessert2:#6e4ccc;
@@ -74,7 +87,7 @@ $dessert3:#229df9;
 
 //variables tailles h2 
 
-$traits:
+$traits:// main-du-menu partie-du-repas couleur
       l-n-e entrees $color1,
       l-n-e plats $color1,
       l-n-e desserts $color1,
@@ -91,11 +104,11 @@ $traits:
       l-p-d-g plats#75c158,
       l-p-d-g desserts#b0f377;
 
-$backgrounds:
-      la-note-enchantee rgb(252,223,218) l-n-e,
-      le-chic-a-la-française rgb(254,245,253) l-c-f,
-      le-délice-des-papilles rgb(249,249,249) l-d-p,
-      la-palette-du-gout rgb(253,255,253) l-p-d-g;
+$backgrounds: //nom-restaurant fond
+      la-note-enchantee $fond-1,
+      le-chic-a-la-française $fond-2,
+      le-délice-des-papilles $fond-3,
+      la-palette-du-gout $fond-4;
 
 
 @keyframes points{

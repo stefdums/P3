@@ -12,12 +12,6 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "mkbritishwritingregular";
-  src: url(../css/fonts/mkbritishwriting-webfont.woff2) format("woff2"), url(../css/fonts/mkbritishwriting.ttf) format("ttf"), url(../css/fonts/mkbritishwriting-webfont.woff) format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: "croissant_oneregular";
   src: url(../css/fonts/croissantone-regular-webfont.woff2) format("woff2"), url(../css/fonts/croissantone-regular-webfont.woff) format("woff");
   font-weight: normal;
@@ -38,6 +32,24 @@
 @font-face {
   font-family: "kaushan_scriptregular";
   src: url(../css/fonts/kaushanscript-regular-webfont.woff2) format("woff2"), url(../css/fonts/kaushanscript-regular-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "typo_comics_bold_demoregular";
+  src: url(../css/typo_comics_bold_demo-webfont.woff2) format("woff2"), url(../css/fonts/typo_comics_bold_demo-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "typo_comics_demoregular";
+  src: url(../css/fonts/typo_comics_demo-webfont.woff2) format("woff2"), url(../css/fonts/typo_comics_demo-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "typo_comics_light_demoregular";
+  src: url(../css/fonts/typo_comics_light_demo-webfont.woff2) format("woff2"), url(../css/fonts/typo_comics_light_demo-webfont.woff) format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -256,7 +268,7 @@ main .menu p {
 
 .la-note-enchantee, .page__la-note-enchantee {
   background-color: #fcdfda;
-  font-family: "mkbritishwritingregular", sans-serif;
+  font-family: "segoe-print", "typo_comics_demoregular", sans-serif;
 }
 .la-note-enchantee h1, .page__la-note-enchantee h1 {
   margin-top: 50px;
@@ -296,12 +308,13 @@ main .menu p {
 }
 
 .le-chic-a-la-française, .page__le-chic-a-la-française {
+  background-color: #fef5fd;
   font-family: "croissant_oneregular", sans-serif;
   text-align: center;
 }
 .le-chic-a-la-française h1, .page__le-chic-a-la-française h1 {
-  font-size: 17px;
-  margin-top: 70px;
+  font-size: 20px;
+  margin-top: 50px;
   background: linear-gradient(160deg, #e38a12, #8f5aff);
   -webkit-background-clip: text;
   color: transparent;
@@ -337,17 +350,20 @@ main .menu p {
 }
 .le-chic-a-la-française .intitule img, .page__le-chic-a-la-française .intitule img {
   width: 30%;
-  flex-shrink: 100;
+  flex-shrink: 10;
 }
 .le-chic-a-la-française .intitule h2 + img, .page__le-chic-a-la-française .intitule h2 + img {
   transform: scale(-1);
 }
 
+.le-délice-des-papilles, .page__le-délice-des-papilles {
+  background-color: #f9f9f9;
+}
 .le-délice-des-papilles h1, .page__le-délice-des-papilles h1 {
   font-family: "alluraregular", sans-serif;
   font-size: 1.75em;
   padding-top: 8px;
-  margin-top: 70px;
+  margin-top: 46px;
   margin-bottom: 8.5px;
   background: linear-gradient(to right, #0023db, #2495fb);
   -webkit-background-clip: text;
@@ -380,13 +396,16 @@ main .menu p {
   flex-shrink: 0;
 }
 .le-délice-des-papilles .intitule img, .page__le-délice-des-papilles .intitule img {
-  width: 32%;
+  width: 25%;
   flex-shrink: 10;
 }
 .le-délice-des-papilles .intitule h2 + img, .page__le-délice-des-papilles .intitule h2 + img {
   transform: scaleX(-1);
 }
 
+.la-palette-du-gout, .page__la-palette-du-gout {
+  background-color: #fdfffd;
+}
 .la-palette-du-gout h1, .page__la-palette-du-gout h1 {
   font-family: "kaushan_scriptregular", sans-serif;
   font-weight: lighter;
@@ -425,7 +444,7 @@ main .menu p {
 }
 .la-palette-du-gout .intitule img, .page__la-palette-du-gout .intitule img {
   height: auto;
-  width: 32%;
+  width: 30%;
   flex-shrink: 10;
 }
 .la-palette-du-gout .intitule h2 + img, .page__la-palette-du-gout .intitule h2 + img {
