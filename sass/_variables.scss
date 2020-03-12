@@ -85,31 +85,11 @@ $entrée3:#0228dd;
 $plat3:#0670f3;
 $dessert3:#229df9;
 
-//variables tailles h2 
-
-$traits:// main-du-menu partie-du-repas couleur
-      l-n-e entrees $color1,
-      l-n-e plats $color1,
-      l-n-e desserts $color1,
-
-      l-c-f entrees $entrée2,
-      l-c-f plats $plat2,
-      l-c-f desserts $dessert2,
-
-      l-d-p entrees $entrée3,
-      l-d-p plats $plat3,
-      l-d-p desserts $dessert3,
-  
-      l-p-d-g entrees #41963c,
-      l-p-d-g plats#75c158,
-      l-p-d-g desserts#b0f377;
-
 $backgrounds: //nom-restaurant fond
       la-note-enchantee $fond-1,
       le-chic-a-la-française $fond-2,
       le-délice-des-papilles $fond-3,
       la-palette-du-gout $fond-4;
-
 
 @keyframes points{
    0% {
@@ -152,3 +132,22 @@ $backgrounds: //nom-restaurant fond
    }
 
 }
+
+//variables tailles h2 
+
+$traits:// main-du-menu partie-du-repas couleur
+      l-n-e entrees $color1,
+      l-n-e plats $color1,
+      l-n-e desserts $color1,
+
+      l-c-f entrees $entrée2,
+      l-c-f plats $plat2,
+      l-c-f desserts $dessert2,
+
+      l-d-p entrees $entrée3,
+      l-d-p plats $plat3,
+      l-d-p desserts $dessert3,
+  
+      l-p-d-g entrees #41963c,
+      l-p-d-g plats#75c158,
+      l-p-d-g desserts#b0f377;
