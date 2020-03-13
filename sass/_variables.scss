@@ -1,3 +1,4 @@
+//polices
 @font-face {
       font-family: 'montserratextrabold';
       src: url(../css/fonts/montserrat-extrabold-webfont.woff2) format('woff2'),
@@ -64,7 +65,7 @@ src: url(../css/fonts/typo_comics_light_demo-webfont.woff2) format('woff2'),
       url(../css/fonts/typo_comics_light_demo-webfont.woff) format('woff');
 font-weight: normal;
 font-style: normal;
-  } 
+} 
 
 //variables couleurs fond
 $fond-1:rgb(252,223,218);
@@ -91,6 +92,7 @@ $backgrounds: //nom-restaurant fond
       le-délice-des-papilles $fond-3,
       la-palette-du-gout $fond-4;
 
+//keyframes pour l'animation des points de suspension.      
 @keyframes points{
    0% {
          opacity:1;
@@ -108,7 +110,8 @@ $backgrounds: //nom-restaurant fond
          opacity:0;
    }
 }
-  
+
+//keyframes pour l'animation "effet wiggle" des boutons du footer
 @keyframes wiggle{
    0%{
       transform : translate(0px);
