@@ -309,18 +309,42 @@ main{
 
 //animation du bouton prochainement     
   
+//1ere version, points synchronisés
+//     .points{
+//         animation-name: points;
+//         animation-duration: 1000ms;
+//         animation-iteration-count:infinite;
+//         animation-direction:alternate;  
+//         .point{
+//             display: inline-block;
+//             background-color: $jaune;
+//             border-radius:50px;
+//             width:9px;
+//             height:9px;
+//             opacity: 1;
+//         }
+//     }   
+// }
+
+//2eme version, points decalés
     .points{
-        animation-name: points;
-        animation-duration: 1000ms;
-        animation-iteration-count:infinite;
-        animation-direction:alternate;  
         .point{
+            animation-name: points;
+            animation-duration: 1500ms;
+            animation-iteration-count:infinite;
+            animation-direction:alternate; 
             display: inline-block;
             background-color: $jaune;
             border-radius:50px;
             width:9px;
             height:9px;
             opacity: 1;
+        }
+        .point2{
+            animation-delay:500ms
+        }
+        .point3{
+            animation-delay:750ms
         }
     }   
 }

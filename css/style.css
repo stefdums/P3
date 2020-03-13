@@ -442,19 +442,23 @@ main article .menu p {
   color: #fcca46;
   margin: 3vh auto;
 }
-#prochainement .points {
+#prochainement .points .point {
   animation-name: points;
-  animation-duration: 1000ms;
+  animation-duration: 1500ms;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-}
-#prochainement .points .point {
   display: inline-block;
   background-color: #fcca46;
   border-radius: 50px;
   width: 9px;
   height: 9px;
   opacity: 1;
+}
+#prochainement .points .point2 {
+  animation-delay: 500ms;
+}
+#prochainement .points .point3 {
+  animation-delay: 750ms;
 }
 
 footer {
